@@ -17,4 +17,4 @@ jobs:
         run: |
           PRODUCT="auto"
           TEMPLATE="auto1"
-          gh workflow run ci-cd-condition-template.yml --repo saman-core/condition-template --ref main -f product=$(echo $PRODUCT) -f template=$(echo $TEMPLATE)
+          gh workflow run ci-cd-conditions.yml --repo saman-core/condition-template --ref main -f product=$(echo $PRODUCT) -f template=$(echo $TEMPLATE)
