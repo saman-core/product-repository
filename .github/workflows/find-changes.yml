@@ -3,13 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY: ghcr.io
-  ACTOR: sige3-desarrollo
-  IMAGE_APP_NAME: sigevih
-  APP_NAME: back-public
-  EKS_CLUSTER_NAME: my-cluster
-  AWS_REGION: us-east-1
-  N_REPLICA: 2
+  GH_TOKEN: ${{ secrets.GIT_TOKEN }}
 
 jobs:
   build_contenizer:
