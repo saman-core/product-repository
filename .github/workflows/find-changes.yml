@@ -1,0 +1,26 @@
+name: FIND-CHANGES
+on:
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  ACTOR: sige3-desarrollo
+  IMAGE_APP_NAME: sigevih
+  APP_NAME: back-public
+  EKS_CLUSTER_NAME: my-cluster
+  AWS_REGION: us-east-1
+  N_REPLICA: 2
+
+jobs:
+  build_contenizer:
+    name: Build & Contenerize App
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set env
+        run: |
+          PRODUCT="auto"
+          TEMPLATE="auto1"
+          gh workflow run conditions-template.yml --ref main -f product=$(echo $PRODUCT) -f template=$(echo $TEMPLATE)
