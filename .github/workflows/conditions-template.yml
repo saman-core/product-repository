@@ -54,4 +54,5 @@ jobs:
 
       - name: Build native app
         run: |
+          cd condition-template/
           ./mvnw package -Dnative -Dquarkus.profile=quality -DskipTests
