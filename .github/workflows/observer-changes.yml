@@ -33,5 +33,7 @@ jobs:
             PRODUCT=$(echo "$path" | cut -d "/" -f2);
             TEMPLATE=$(echo "$path" | cut -d "/" -f4);
             GIT_DEPLOY_HASH=$(kubectl get deployment conditions-$(echo $PRODUCT)-$(echo $TEMPLATE) -n api -o jsonpath='{.metadata.annotations.deployHash}')
-            echo "$GIT_DEPLOY_HASH"
+            
+            GIT_DIFF=$(git diff $(echo $GIT_DEPLOY_HASH) $(echo $GIT_ACTUAL_HASH) --name-only -- $(echo $PRODUCT)/templates/$(echo $TEMPLATE)/conditions)
+            echo "$GIT_DIFF"
           done
