@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -25,11 +26,9 @@ jobs:
       - name: Update kube config
         run: aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --region $AWS_REGION
 
-
       - name: Find Conditions
         run: |
           GIT_ACTUAL_HASH=$(git rev-parse HEAD)
-          find . -name form.json
           for path in $(find . -name form.json); do
             PRODUCT=$(echo "$path" | cut -d "/" -f2);
             TEMPLATE=$(echo "$path" | cut -d "/" -f4);
