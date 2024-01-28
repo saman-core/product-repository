@@ -33,9 +33,5 @@ jobs:
             PRODUCT=$(echo "$path" | cut -d "/" -f2);
             TEMPLATE=$(echo "$path" | cut -d "/" -f4);
             GIT_DEPLOY_HASH=$(kubectl get deployment conditions-$(echo $PRODUCT)-$(echo $TEMPLATE) -n api -o jsonpath='{.metadata.annotations.deployHash}')
-            GIT_DIFF=$(git diff $(echo $GIT_DEPLOY_HASH) $(echo $GIT_ACTUAL_HASH) --name-only -- $(echo $PRODUCT)/templates/$(echo $TEMPLATE)/conditions)
-            if [[ -n "$GIT_DIFF" ]]; then
-              echo "Conditions changed -> Product: $PRODUCT; Template: $TEMPLATE"
-              gh workflow run ci-cd-conditions-test.yml --repo saman-core/condition-template --ref main -f product=$(echo $PRODUCT) -f template=$(echo $TEMPLATE)
-            fi
+            echo "$GIT_DEPLOY_HASH"
           done
