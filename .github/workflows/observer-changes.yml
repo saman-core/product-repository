@@ -35,7 +35,7 @@ jobs:
             PRODUCT=$(echo "$path" | cut -d "/" -f2);
             TEMPLATE=$(echo "$path" | cut -d "/" -f4);
             GIT_DEPLOY_HASH=$(kubectl get deployment conditions-$(echo $PRODUCT)-$(echo $TEMPLATE) -n api -o jsonpath='{.metadata.annotations.deployHash}' || echo "")
-            if [[ -z "$GIT_DEPLOY_HASH" ]]; then
+            if [[ -n "$GIT_DEPLOY_HASH" ]]; then
               GIT_DIFF=$(git diff $(echo $GIT_DEPLOY_HASH) $(echo $GIT_ACTUAL_HASH) --name-only -- $(echo $PRODUCT)/templates/$(echo $TEMPLATE)/conditions)
               if [[ -n "$GIT_DIFF" ]]; then
                 echo "Conditions changed -> Product: $PRODUCT; Template: $TEMPLATE"
