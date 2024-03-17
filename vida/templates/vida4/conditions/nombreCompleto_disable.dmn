@@ -11,7 +11,7 @@
     <dmn:informationRequirement id="_7D312A66-3AD9-426A-A60E-331D9DFE4462">
       <dmn:requiredInput href="#_A7AE09BE-37DF-49CB-94BE-DF305C435F75"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_EE07F03C-74CE-4352-A7DD-C6510F1FDF0D" hitPolicy="PRIORITY" preferredOrientation="Rule-as-Row">
+    <dmn:decisionTable id="_EE07F03C-74CE-4352-A7DD-C6510F1FDF0D" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_7ADD270D-DAD0-4F7E-B2FF-8ABE9B1B99DC">
         <dmn:inputExpression id="_A0109CBD-2A0C-413C-815D-330B7027AF1C" typeRef="number">
           <dmn:text>cedula</dmn:text>
