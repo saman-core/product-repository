@@ -36,9 +36,9 @@ jobs:
             TEMPLATE=$(echo "$path" | cut -d "/" -f4);
           
             echo "---------------------------------------------"
-            echo "TEMPLATES------------------------------------"
+            echo "CDE------------------------------------------"
             echo "---------------------------------------------"
-            TEMPLATE_GIT_DEPLOY_HASH=$(kubectl get deployment template-$(echo $PRODUCT)-$(echo $TEMPLATE) -n api -o jsonpath='{.metadata.annotations.deployHash}' || echo "")
+            TEMPLATE_GIT_DEPLOY_HASH=$(kubectl get deployment cde-$(echo $PRODUCT)-$(echo $TEMPLATE) -n api -o jsonpath='{.metadata.annotations.deployHash}' || echo "")
             if [[ -n "$TEMPLATE_GIT_DEPLOY_HASH" ]]; then
               TEMPLATE_GIT_DIFF=$(git diff $(echo $TEMPLATE_GIT_DEPLOY_HASH) $(echo $GIT_ACTUAL_HASH) --name-only -- $(echo $PRODUCT)/templates/$(echo $TEMPLATE)/form.json)
               if [[ -n "$TEMPLATE_GIT_DIFF" ]]; then
