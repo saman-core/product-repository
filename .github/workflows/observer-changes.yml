@@ -32,8 +32,8 @@ jobs:
         run: |
           GIT_ACTUAL_HASH=$(git rev-parse HEAD)
           for path in $(find . -name form.json); do
-            PRODUCT=$(echo "$path" | cut -d "/" -f2);
-            TEMPLATE=$(echo "$path" | cut -d "/" -f4);
+            PRODUCT=$(echo "$path" | cut -d "/" -f3);
+            TEMPLATE=$(echo "$path" | cut -d "/" -f5);
           
             echo "---------------------------------------------"
             echo "CDE------------------------------------------"
