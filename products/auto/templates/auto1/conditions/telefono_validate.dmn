@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_3DB4DDDC-A15F-4279-82A2-D3814C5B215B" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_BF0143DD-2176-4A02-B5D6-CE8A705C6267" name="telefono_validate" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_BF0143DD-2176-4A02-B5D6-CE8A705C6267" name="telefono_validate" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core">
   <dmn:extensionElements/>
   <dmn:inputData id="_14923D28-30AA-4EB2-BA4B-A40CBB0D2E61" name="telefono">
     <dmn:extensionElements/>
@@ -11,7 +11,7 @@
     <dmn:informationRequirement id="_ECAF8D0B-AB0D-455B-97FF-41F00DFFB1D9">
       <dmn:requiredInput href="#_14923D28-30AA-4EB2-BA4B-A40CBB0D2E61"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_A2EAB8C5-9B04-4F21-A655-C5F9C3BD7C37" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+    <dmn:decisionTable id="_A2EAB8C5-9B04-4F21-A655-C5F9C3BD7C37" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_957C5368-4817-4332-A09D-4E3EDA838E15">
         <dmn:inputExpression id="_88336BDD-5381-4E71-AA69-95730D15A869" typeRef="string">
           <dmn:text>telefono</dmn:text>
