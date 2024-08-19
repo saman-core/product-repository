@@ -1,0 +1,62 @@
+name: OBSERVER-CHANGES-LOCAL
+on:
+  workflow_dispatch:
+
+env:
+  GH_TOKEN: ${{ secrets.GIT_TOKEN }}
+
+jobs:
+  listener:
+    name: Observer Changes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set Kubectl
+        uses: azure/setup-kubectl@v4
+
+      - name: Find Templates & Conditions
+        env:
+          BASE64: ${{ secrets.KUBE_CONFIG }}
+        run: |
+          base64 -d -i <<<$(echo $BASE64) > ./kubeconfig
+          export KUBECONFIG=./kubeconfig
+          GIT_ACTUAL_HASH=$(git rev-parse HEAD)
+          for path in $(find . -name form.json); do
+            PRODUCT=$(echo "$path" | cut -d "/" -f3);
+            TEMPLATE=$(echo "$path" | cut -d "/" -f5);
+          
+            echo "---------------------------------------------"
+            echo "CDE------------------------------------------"
+            echo "---------------------------------------------"
+            TEMPLATE_GIT_DEPLOY_HASH=$(kubectl get ksvc cde-$(echo $PRODUCT)-$(echo $TEMPLATE) -n api -o jsonpath='{.metadata.annotations.deployHash}' --insecure-skip-tls-verify || echo "")
+            if [[ -n "$TEMPLATE_GIT_DEPLOY_HASH" ]]; then
+              TEMPLATE_GIT_DIFF=$(git diff $(echo $TEMPLATE_GIT_DEPLOY_HASH) $(echo $GIT_ACTUAL_HASH) --name-only -- products/$(echo $PRODUCT)/templates/$(echo $TEMPLATE)/form.json)
+              if [[ -n "$TEMPLATE_GIT_DIFF" ]]; then
+                echo "Template changed -> Product: $PRODUCT; Template: $TEMPLATE"
+                gh workflow run ci-cd-cde-local.yml --repo saman-core/cde --ref main -f product=$(echo $PRODUCT) -f template=$(echo $TEMPLATE)
+              fi
+            else
+              echo "Template new template -> Product: $PRODUCT; Template: $TEMPLATE"
+              gh workflow run ci-cd-cde-local.yml --repo saman-core/cde --ref main -f product=$(echo $PRODUCT) -f template=$(echo $TEMPLATE)
+            fi
+          
+            echo "---------------------------------------------"
+            echo "CONDITIONS-----------------------------------"
+            echo "---------------------------------------------"
+            CONDITIONS_GIT_DEPLOY_HASH=$(kubectl get ksvc conditions-$(echo $PRODUCT)-$(echo $TEMPLATE) -n api -o jsonpath='{.metadata.annotations.deployHash}' --insecure-skip-tls-verify || echo "")
+            if [[ -n "$CONDITIONS_GIT_DEPLOY_HASH" ]]; then
+              CONDITIONS_GIT_DIFF=$(git diff $(echo $CONDITIONS_GIT_DEPLOY_HASH) $(echo $GIT_ACTUAL_HASH) --name-only -- products/$(echo $PRODUCT)/templates/$(echo $TEMPLATE)/conditions)
+              if [[ -n "$CONDITIONS_GIT_DIFF" ]]; then
+                echo "Conditions changed -> Product: $PRODUCT; Template: $TEMPLATE"
+                gh workflow run ci-cd-conditions-local.yml --repo saman-core/condition-template --ref main -f product=$(echo $PRODUCT) -f template=$(echo $TEMPLATE)
+              fi
+            else
+              echo "Conditions new template -> Product: $PRODUCT; Template: $TEMPLATE"
+              gh workflow run ci-cd-conditions-local.yml --repo saman-core/condition-template --ref main -f product=$(echo $PRODUCT) -f template=$(echo $TEMPLATE)
+            fi
+          done
