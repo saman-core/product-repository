@@ -1,1 +1,1 @@
-{"properties":[],"components":[]}
+{"properties":["generatesMovements","isAutoEmitted"],"components":[{"label":"Generates movements?","tableView":false,"defaultValue":false,"key":"generatesMovements","type":"samanCheckbox","input":true},{"label":"Is Auto Emitted?","tableView":false,"key":"isAutoEmitted","type":"samanCheckbox","input":true,"defaultValue":false}]}
