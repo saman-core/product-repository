@@ -7,18 +7,18 @@
     <dmn:encapsulatedLogic id="_5F7DDF61-E0F2-4C6F-B4B4-8DE7E585F45C" kind="Java">
       <dmn:formalParameter id="_5A1ED60F-9727-4895-B4D7-DBA515865484" name="systemTableName" typeRef="string"/>
       <dmn:formalParameter id="_8C2CE7A1-64C4-4B05-9C87-34A6688257EE" name="systemTableProperty" typeRef="string"/>
-      <dmn:formalParameter id="_1CD038B5-95A7-4ED3-9835-D2425F0EDEEF" name="conditions" typeRef="string"/>
-      <dmn:context id="_FE65AAED-6679-4F7A-8387-75C19A9381DC">
+      <dmn:formalParameter id="_1CD038B5-95A7-4ED3-9835-D2425F0EDEEF" name="conditions" typeRef="context"/>
+      <dmn:context id="_72DAC359-6322-4A56-82E1-990DFE6C1054">
         <dmn:contextEntry>
-          <dmn:variable id="_3E4B8EDF-0A06-461A-A3E5-5C02AB9E4DE8" name="class" typeRef="string"/>
+          <dmn:variable id="_DA000D53-BB23-4F02-B15A-50BE4FC982EB" name="class" typeRef="string"/>
           <dmn:literalExpression id="_8FD1E332-60C3-4C16-BA9B-A5FB2C72F3A7">
             <dmn:text>"io.samancore.condition_template.client.SystemTableWrapperClient"</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
         <dmn:contextEntry>
-          <dmn:variable id="_05CC1B77-DFF5-481D-85CB-6B33B7759C2A" name="method signature" typeRef="string"/>
+          <dmn:variable id="_655DC1C8-C553-4D9A-B51D-09260D43C7A9" name="method signature" typeRef="string"/>
           <dmn:literalExpression id="_C4A25513-AE9C-4FEA-A455-D71BCC0E1AE5">
-            <dmn:text>"call(java.lang.String, java.lang.String, java.lang.String)"</dmn:text>
+            <dmn:text>"call(java.lang.String, java.lang.String, java.util.Map)"</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
       </dmn:context>
@@ -34,7 +34,7 @@
       <dmn:requiredKnowledge href="#_8D62B497-C2C8-4C60-BE16-2619138AAC16"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_E02F10DC-993D-4805-81DF-3A47CD4013C1">
-      <dmn:text>systemTable(edad, "ok", "a")</dmn:text>
+      <dmn:text>systemTable(edad, "ok", {"a": "a1", "b": "b2"})</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_3E7A707F-4FF8-49A1-BB3D-4679819B9164" name="edad">
@@ -45,7 +45,7 @@
     <dmndi:DMNDiagram id="_64110A90-BCCA-462F-983B-2FBD2CD39E92" name="DRG">
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_FE65AAED-6679-4F7A-8387-75C19A9381DC">
+          <kie:ComponentWidths dmnElementRef="_72DAC359-6322-4A56-82E1-990DFE6C1054">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
             <kie:width>446</kie:width>
