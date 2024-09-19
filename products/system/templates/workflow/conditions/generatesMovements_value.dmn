@@ -31,7 +31,7 @@
       <dmn:requiredKnowledge href="#_8D62B497-C2C8-4C60-BE16-2619138AAC16"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_E02F10DC-993D-4805-81DF-3A47CD4013C1">
-      <dmn:text>systemTable(edad, "ok", {"a":"b", "c":"d"})</dmn:text>
+      <dmn:text>systemTable(edad, "ok", "a")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_3E7A707F-4FF8-49A1-BB3D-4679819B9164" name="edad">
@@ -77,7 +77,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="390" y="82" width="100" height="50"/>
+        <dc:Bounds x="390" y="81" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_3E7A707F-4FF8-49A1-BB3D-4679819B9164" dmnElementRef="_3E7A707F-4FF8-49A1-BB3D-4679819B9164" isCollapsed="false">
@@ -91,11 +91,11 @@
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_960820CD-023C-4DE9-9F02-662F44E18123" dmnElementRef="_960820CD-023C-4DE9-9F02-662F44E18123">
         <di:waypoint x="440" y="279"/>
-        <di:waypoint x="440" y="107"/>
+        <di:waypoint x="440" y="106"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_3AA17659-9536-4803-B38E-7BB16AEFA9A7" dmnElementRef="_3AA17659-9536-4803-B38E-7BB16AEFA9A7">
         <di:waypoint x="668" y="160"/>
-        <di:waypoint x="490" y="107"/>
+        <di:waypoint x="490" y="106"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
