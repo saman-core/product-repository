@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_9C3826A0-8129-4EEE-BE18-DAAE975CFCA1" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_187F4C76-FFEE-438A-BA01-9D8F86961B86" name="generatesMovements_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_187F4C76-FFEE-438A-BA01-9D8F86961B86" name="generatesMovements_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core">
   <dmn:extensionElements/>
   <dmn:businessKnowledgeModel id="_8D62B497-C2C8-4C60-BE16-2619138AAC16" name="systemTable">
     <dmn:extensionElements/>
     <dmn:variable id="_D5774FC8-DB13-4AAD-A57C-4ECE566FB6C9" name="systemTable" typeRef="string"/>
     <dmn:encapsulatedLogic id="_5F7DDF61-E0F2-4C6F-B4B4-8DE7E585F45C" kind="Java">
-      <dmn:context id="_AF3E2433-B9D9-4792-8FB4-356F1E02F246">
+      <dmn:context id="_DE21FE12-5D3C-4993-B9E8-7AD1D4A001E8">
         <dmn:contextEntry>
-          <dmn:variable id="_D825F264-81D4-44DA-BAAB-2A5690A8245E" name="class" typeRef="string"/>
+          <dmn:variable id="_69634605-FF0E-43E7-86D5-518BC52ABE7E" name="class" typeRef="string"/>
           <dmn:literalExpression id="_8FD1E332-60C3-4C16-BA9B-A5FB2C72F3A7">
-            <dmn:text>io.samancore.condition_template.client.SystemTableWrapperClient</dmn:text>
+            <dmn:text>"io.samancore.condition_template.client.SystemTableWrapperClient"</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
         <dmn:contextEntry>
-          <dmn:variable id="_BB5D1E6D-B3C5-4560-B636-E4DE06B477D8" name="method signature" typeRef="string"/>
+          <dmn:variable id="_BAFD2E87-1671-4882-9C81-BE453A68595C" name="method signature" typeRef="string"/>
           <dmn:literalExpression id="_C4A25513-AE9C-4FEA-A455-D71BCC0E1AE5">
-            <dmn:text>call(java.lang.String, java.lang.String, java.util.Map)</dmn:text>
+            <dmn:text>"call(java.lang.String, java.lang.String, java.lang.String)"</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
       </dmn:context>
@@ -42,7 +42,7 @@
     <dmndi:DMNDiagram id="_64110A90-BCCA-462F-983B-2FBD2CD39E92" name="DRG">
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_AF3E2433-B9D9-4792-8FB4-356F1E02F246">
+          <kie:ComponentWidths dmnElementRef="_DE21FE12-5D3C-4993-B9E8-7AD1D4A001E8">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
             <kie:width>446</kie:width>
