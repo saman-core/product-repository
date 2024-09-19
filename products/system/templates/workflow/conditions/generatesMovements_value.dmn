@@ -5,15 +5,18 @@
     <dmn:extensionElements/>
     <dmn:variable id="_D5774FC8-DB13-4AAD-A57C-4ECE566FB6C9" name="systemTable" typeRef="string"/>
     <dmn:encapsulatedLogic id="_5F7DDF61-E0F2-4C6F-B4B4-8DE7E585F45C" kind="Java">
-      <dmn:context id="_DE21FE12-5D3C-4993-B9E8-7AD1D4A001E8">
+      <dmn:formalParameter id="_5A1ED60F-9727-4895-B4D7-DBA515865484" name="systemTableName" typeRef="string"/>
+      <dmn:formalParameter id="_8C2CE7A1-64C4-4B05-9C87-34A6688257EE" name="systemTableProperty" typeRef="string"/>
+      <dmn:formalParameter id="_1CD038B5-95A7-4ED3-9835-D2425F0EDEEF" name="conditions" typeRef="string"/>
+      <dmn:context id="_FE65AAED-6679-4F7A-8387-75C19A9381DC">
         <dmn:contextEntry>
-          <dmn:variable id="_69634605-FF0E-43E7-86D5-518BC52ABE7E" name="class" typeRef="string"/>
+          <dmn:variable id="_3E4B8EDF-0A06-461A-A3E5-5C02AB9E4DE8" name="class" typeRef="string"/>
           <dmn:literalExpression id="_8FD1E332-60C3-4C16-BA9B-A5FB2C72F3A7">
             <dmn:text>"io.samancore.condition_template.client.SystemTableWrapperClient"</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
         <dmn:contextEntry>
-          <dmn:variable id="_BAFD2E87-1671-4882-9C81-BE453A68595C" name="method signature" typeRef="string"/>
+          <dmn:variable id="_05CC1B77-DFF5-481D-85CB-6B33B7759C2A" name="method signature" typeRef="string"/>
           <dmn:literalExpression id="_C4A25513-AE9C-4FEA-A455-D71BCC0E1AE5">
             <dmn:text>"call(java.lang.String, java.lang.String, java.lang.String)"</dmn:text>
           </dmn:literalExpression>
@@ -42,7 +45,7 @@
     <dmndi:DMNDiagram id="_64110A90-BCCA-462F-983B-2FBD2CD39E92" name="DRG">
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_DE21FE12-5D3C-4993-B9E8-7AD1D4A001E8">
+          <kie:ComponentWidths dmnElementRef="_FE65AAED-6679-4F7A-8387-75C19A9381DC">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
             <kie:width>446</kie:width>
