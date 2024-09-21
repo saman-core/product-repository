@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_36600409-FE30-425D-8472-4FB5A512B202" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_CE2D77DC-DBD6-401A-A552-8A0B0A3B8BDE" name="direccion_visible" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_36600409-FE30-425D-8472-4FB5A512B202" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_CE2D77DC-DBD6-401A-A552-8A0B0A3B8BDE" name="direccion_visible" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/direccion_visible">
   <dmn:extensionElements/>
   <dmn:inputData id="_2D4C5222-1AD0-4686-A0E4-5A222918CB8B" name="sexo">
     <dmn:extensionElements/>
