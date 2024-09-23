@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_37567743-B515-4669-AD57-CEC8ADF792B4" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:included1="saman-core/property/generatesMovements_value" id="_0E09F6EB-E2E4-412E-B658-67E41D1FF6BD" name="tasaMortalidad_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/tasaMortalidad_value">
+  <dmn:extensionElements/>
+  <dmn:import id="_BF110E24-0553-4E02-A6F9-4D3E6FD9E0D2" name="st" namespace="saman-core/property/generatesMovements_value" locationURI="systemTable.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:inputData id="_46239026-FB0A-432C-9DC0-ADD2B5D88E20" name="edad">
+    <dmn:extensionElements/>
+    <dmn:variable id="_B86781F1-2944-4403-960F-8AC94B683B7D" name="edad"/>
+  </dmn:inputData>
+  <dmn:inputData id="_2D9C78F6-BB14-434E-BCF6-CB35E1A2B9A1" name="genero">
+    <dmn:extensionElements/>
+    <dmn:variable id="_9641BC7C-10FD-4523-AF9B-D7BF02DB22B8" name="genero"/>
+  </dmn:inputData>
+  <dmn:decision id="_44AC4406-779F-4342-BE52-B06AE2A78236" name="result">
+    <dmn:extensionElements/>
+    <dmn:variable id="_B7B443E6-6E81-43B6-9409-A5B231BC1218" name="result" typeRef="number"/>
+    <dmn:informationRequirement id="_AA0CE99F-0D50-45AB-9DFD-266E7CEF64DC">
+      <dmn:requiredInput href="#_2D9C78F6-BB14-434E-BCF6-CB35E1A2B9A1"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_BA9ACAF8-2049-4E49-90F5-93AF62A97552">
+      <dmn:requiredInput href="#_46239026-FB0A-432C-9DC0-ADD2B5D88E20"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_3D058490-9816-4D18-86E9-7FA0F2373349">
+      <dmn:requiredKnowledge href="saman-core/property/generatesMovements_value#_8D62B497-C2C8-4C60-BE16-2619138AAC16"/>
+    </dmn:knowledgeRequirement>
+    <dmn:literalExpression id="_304844F8-3576-474F-8A4F-212C8B56A548">
+      <dmn:text>st.systemTableNumber("tasa-mortalidad", "fumador", {"edad": edad, "genero": genero})</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_EEAEDBAA-C1D4-4339-8E27-F1961A804771" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_304844F8-3576-474F-8A4F-212C8B56A548">
+            <kie:width>698</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_8D62B497-C2C8-4C60-BE16-2619138AAC16" dmnElementRef="included1:_8D62B497-C2C8-4C60-BE16-2619138AAC16" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="832" y="202" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_46239026-FB0A-432C-9DC0-ADD2B5D88E20" dmnElementRef="_46239026-FB0A-432C-9DC0-ADD2B5D88E20" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="450" y="291" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_2D9C78F6-BB14-434E-BCF6-CB35E1A2B9A1" dmnElementRef="_2D9C78F6-BB14-434E-BCF6-CB35E1A2B9A1" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="626" y="291" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_44AC4406-779F-4342-BE52-B06AE2A78236" dmnElementRef="_44AC4406-779F-4342-BE52-B06AE2A78236" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="526" y="133" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_3D058490-9816-4D18-86E9-7FA0F2373349" dmnElementRef="_3D058490-9816-4D18-86E9-7FA0F2373349">
+        <di:waypoint x="882" y="227"/>
+        <di:waypoint x="626" y="158"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_AA0CE99F-0D50-45AB-9DFD-266E7CEF64DC-AUTO-TARGET" dmnElementRef="_AA0CE99F-0D50-45AB-9DFD-266E7CEF64DC">
+        <di:waypoint x="676" y="316"/>
+        <di:waypoint x="576" y="183"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_BA9ACAF8-2049-4E49-90F5-93AF62A97552" dmnElementRef="_BA9ACAF8-2049-4E49-90F5-93AF62A97552">
+        <di:waypoint x="500" y="316"/>
+        <di:waypoint x="576" y="158"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
