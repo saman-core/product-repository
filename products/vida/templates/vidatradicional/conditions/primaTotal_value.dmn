@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_DEEFEAB9-3A39-46E3-A0A8-D49689EF4A2D" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_366C13D4-A6AC-43FB-862F-1BC54A60053E" name="primaTotal_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaTotal_value">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/primaTotal_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_366C13D4-A6AC-43FB-862F-1BC54A60053E" name="primaTotal_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaTotal_value">
   <dmn:extensionElements/>
   <dmn:inputData id="_0C19D4ED-FF0E-4774-B699-0267F57ABD9A" name="edad">
     <dmn:extensionElements/>
@@ -12,6 +12,12 @@
   <dmn:decision id="_94591D1C-A2FB-4BA1-83DB-58E265C3D09E" name="result">
     <dmn:extensionElements/>
     <dmn:variable id="_C0E04F34-18F3-41FD-AFA6-5B05F3F3038C" name="result"/>
+    <dmn:informationRequirement id="_5D38F049-4E5E-451F-96E3-02C1B8A08B3A">
+      <dmn:requiredInput href="#_39A06B6F-5EA3-4630-8D1C-564FEF247C38"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_3971D20D-45ED-4FD7-BB4E-2B9F9D239AB8">
+      <dmn:requiredInput href="#_0C19D4ED-FF0E-4774-B699-0267F57ABD9A"/>
+    </dmn:informationRequirement>
     <dmn:decisionTable id="_17F5A454-3FAF-4EBD-BB9E-2C5AA618D587" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_1A097863-A321-4E6B-9AD1-00259789B285">
         <dmn:inputExpression id="_F1BB7365-D74C-4DD3-AA94-79686BA204EA">
@@ -72,6 +78,14 @@
         <dc:Bounds x="349" y="73" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_5D38F049-4E5E-451F-96E3-02C1B8A08B3A" dmnElementRef="_5D38F049-4E5E-451F-96E3-02C1B8A08B3A">
+        <di:waypoint x="491" y="247"/>
+        <di:waypoint x="399" y="123"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_3971D20D-45ED-4FD7-BB4E-2B9F9D239AB8" dmnElementRef="_3971D20D-45ED-4FD7-BB4E-2B9F9D239AB8">
+        <di:waypoint x="297" y="243"/>
+        <di:waypoint x="399" y="123"/>
+      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </dmn:definitions>
