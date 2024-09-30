@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_C5364A8E-8F77-4B49-8150-3A3C672C6B0D" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_A354C259-2682-4418-9A48-E480CADC90A1" name="primaExoneracion_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaExoneracion_value">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/primaExoneracion_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_A354C259-2682-4418-9A48-E480CADC90A1" name="primaExoneracion_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaExoneracion_value">
   <dmn:extensionElements/>
   <dmn:decision id="_BAF49B95-D084-4719-A49B-E311C81A408A" name="result">
     <dmn:extensionElements/>
@@ -19,7 +19,7 @@
     <dmn:decisionTable id="_328440FB-925C-45B5-B166-772B9168489E" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_7E9D0CAF-48F1-41D5-9A1D-BAF52677F2FE">
         <dmn:inputExpression id="_74222786-C256-4723-B57C-5E51E4CB65A5" typeRef="boolean">
-          <dmn:text>checkSobrevivencia</dmn:text>
+          <dmn:text>checkExoneracion</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_3338C8D9-4C0A-4523-9CD8-BC719F07931A"/>
@@ -60,9 +60,9 @@
     <dmn:extensionElements/>
     <dmn:variable id="_6B79467C-2447-4581-9FA0-7303D0C63CE8" name="descuentoExoner" typeRef="number"/>
   </dmn:inputData>
-  <dmn:inputData id="_6D5B8F61-B575-4FBC-8A41-2359242C909D" name="checkSobrevivencia">
+  <dmn:inputData id="_6D5B8F61-B575-4FBC-8A41-2359242C909D" name="checkExoneracion">
     <dmn:extensionElements/>
-    <dmn:variable id="_03002FEA-7E12-4C8A-AADC-93F62E3C0466" name="checkSobrevivencia" typeRef="boolean"/>
+    <dmn:variable id="_03002FEA-7E12-4C8A-AADC-93F62E3C0466" name="checkExoneracion" typeRef="boolean"/>
   </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_5CE11BD9-AA5C-4960-80DA-958AFA567ED4" name="DRG">
