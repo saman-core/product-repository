@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_AD280D38-A986-43E6-9AD1-A2F75E9EE85B" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_5FA095CA-A8AF-4931-BDBA-A8ED1D0FD62F" name="fechaInicio3_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/fechaInicio3_value">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/fechaInicio3_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_5FA095CA-A8AF-4931-BDBA-A8ED1D0FD62F" name="fechaInicio3_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/fechaInicio3_value">
   <dmn:extensionElements/>
   <dmn:inputData id="_A4FDADCB-4175-494D-B121-7AF07DF26601" name="duracionDelContrato">
     <dmn:extensionElements/>
@@ -19,7 +19,7 @@
       <dmn:requiredInput href="#_209F5DEC-BDEC-47F8-93EF-E8C989F7CC0F"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_35DD06DD-AF6B-467E-8342-96F1E0DD6319">
-      <dmn:text>date(fechaInicio1) + duration("P" + duracionDelContrato + "Y")</dmn:text>
+      <dmn:text>date(fechaInicio1) + duration("P" + string(duracionDelContrato) + "Y")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmndi:DMNDI>
@@ -27,7 +27,7 @@
       <di:extension>
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="_35DD06DD-AF6B-467E-8342-96F1E0DD6319">
-            <kie:width>539</kie:width>
+            <kie:width>614</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
