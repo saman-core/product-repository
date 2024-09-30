@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_848FC8F6-DBE4-4FCB-9322-C1492B5EAA8C" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_490957D9-576D-4339-AF64-96F7DDF7CECD" name="primaFallec_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaFallec_value">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/primaFallec_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_490957D9-576D-4339-AF64-96F7DDF7CECD" name="primaFallec_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaFallec_value">
   <dmn:extensionElements/>
   <dmn:decision id="_0F2A2794-824B-4E63-9F85-8E0A1C451B52" name="result">
     <dmn:extensionElements/>
@@ -13,9 +13,40 @@
     <dmn:informationRequirement id="_B6139F74-15B6-446F-95C5-766CA8F7E068">
       <dmn:requiredInput href="#_92A66332-C604-4006-8BDC-32BB384F2673"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression id="_2E46BAD0-4567-4604-A9FF-535576855BF8">
-      <dmn:text>saFallecimiento*tasaFallecimiento - descuentoFallec</dmn:text>
-    </dmn:literalExpression>
+    <dmn:informationRequirement id="_617D26A5-0B27-4538-8EFB-77D7ECF40561">
+      <dmn:requiredInput href="#_085C9C21-BDF0-4875-807A-04C66349244E"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_2E46BAD0-4567-4604-A9FF-535576855BF8" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_932CE131-D2B1-4A68-AB30-0935F28F3CE0">
+        <dmn:inputExpression id="_4C4545EC-FFFB-422D-989A-342A22AA173E" typeRef="boolean">
+          <dmn:text>checkFallecimiento</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_4439910B-7044-4623-8981-A4252D771D78"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_AB6A16AC-3901-48B4-94B8-1EAFF2B9047C">
+        <dmn:inputEntry id="_4EB989DC-D04D-47ED-B43B-99D202D5DCA9">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_08F0A0E6-3520-4AFA-B970-BF21575B1464">
+          <dmn:text>saFallecimiento*tasaFallecimiento - descuentoFallec</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_3E61F8E0-C802-4878-BF8B-947E0E2841C7">
+        <dmn:inputEntry id="_2D44CF99-3CB6-4FE4-B851-68F4FD38C547">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_215F2D92-CD99-4DBB-922F-A422E30658A7">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmn:inputData id="_3E3B6E4E-E767-40E1-97C4-4E2293381F34" name="saFallecimiento">
     <dmn:extensionElements/>
@@ -29,12 +60,19 @@
     <dmn:extensionElements/>
     <dmn:variable id="_68BD5169-4EA6-45E4-B4AF-A9A6CFBE5161" name="descuentoFallec" typeRef="number"/>
   </dmn:inputData>
+  <dmn:inputData id="_085C9C21-BDF0-4875-807A-04C66349244E" name="checkFallecimiento">
+    <dmn:extensionElements/>
+    <dmn:variable id="_C0432A90-D20D-47F4-88AE-1E3C4C71B51C" name="checkFallecimiento" typeRef="boolean"/>
+  </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_A1BAE68F-1A12-46B3-8605-1167A30F72B2" name="DRG">
       <di:extension>
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="_2E46BAD0-4567-4604-A9FF-535576855BF8">
-            <kie:width>447</kie:width>
+            <kie:width>50</kie:width>
+            <kie:width>144</kie:width>
+            <kie:width>488</kie:width>
+            <kie:width>100</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
@@ -74,6 +112,15 @@
         <dc:Bounds x="506" y="240.21362997270697" width="138" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_085C9C21-BDF0-4875-807A-04C66349244E" dmnElementRef="_085C9C21-BDF0-4875-807A-04C66349244E" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="593" y="147" width="135" height="54"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_A0E9013F-169A-4764-930B-A0E9979645B1" dmnElementRef="_A0E9013F-169A-4764-930B-A0E9979645B1">
         <di:waypoint x="237" y="266"/>
         <di:waypoint x="410" y="109"/>
@@ -84,6 +131,10 @@
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_B6139F74-15B6-446F-95C5-766CA8F7E068" dmnElementRef="_B6139F74-15B6-446F-95C5-766CA8F7E068">
         <di:waypoint x="575" y="265.21362997270694"/>
+        <di:waypoint x="410" y="109"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_617D26A5-0B27-4538-8EFB-77D7ECF40561" dmnElementRef="_617D26A5-0B27-4538-8EFB-77D7ECF40561">
+        <di:waypoint x="660.5" y="174"/>
         <di:waypoint x="410" y="109"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
