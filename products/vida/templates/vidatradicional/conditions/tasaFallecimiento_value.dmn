@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_C838B3D2-5325-435C-9171-AF0A75855C65" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:included1="saman-core/system-table" id="_2FFA9D5E-764F-46D3-BBFB-BBE738C4F93A" name="tasaFallecimiento_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/tasaFallecimiento_value">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/tasaFallecimiento_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:included1="saman-core/system-table" id="_2FFA9D5E-764F-46D3-BBFB-BBE738C4F93A" name="tasaFallecimiento_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/tasaFallecimiento_value">
   <dmn:extensionElements/>
   <dmn:import id="_E6FD1048-E2B2-4DAC-8028-28C1DFBC64AB" name="st" namespace="saman-core/system-table" locationURI="systemTable.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
   <dmn:decision id="_13BE8E55-B5DC-4946-86E9-932AE8F5B4D9" name="result">
@@ -27,7 +27,7 @@
       <dmn:annotation name="annotation-1"/>
       <dmn:rule id="_83AC4B54-ACD8-4AB0-91E0-13C42A9604E7">
         <dmn:inputEntry id="_DAC6B8A5-796E-4AF9-95C4-FCBAEF0F8672">
-          <dmn:text>"true"</dmn:text>
+          <dmn:text>"si"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_51EB265B-4E4F-467B-AA9B-CB19C0455D6B">
           <dmn:text>st.systemTableNumber("tasa-mortalidad", "fumador", {"edad": edadAseg, "genero": sexoAseg})</dmn:text>
@@ -38,7 +38,7 @@
       </dmn:rule>
       <dmn:rule id="_E4BC7A11-B217-4504-BE8C-690A938B71A5">
         <dmn:inputEntry id="_65335973-A4D7-42AB-9CBF-26670CE701AA">
-          <dmn:text>"false"</dmn:text>
+          <dmn:text>"no"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_9DE3E4FE-4E74-4294-BF5D-35BC40829927">
           <dmn:text>st.systemTableNumber("tasa-mortalidad", "noFumador", {"edad": edadAseg, "genero": sexoAseg})</dmn:text>
