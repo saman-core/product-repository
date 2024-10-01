@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_FA46698B-396C-46B8-9367-1D9576081721" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_E3ADD333-D0D4-469A-93F1-552292907E00" name="saInvTotPerm_validate" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/saInvTotPerm_validate">
+  <dmn:extensionElements/>
+  <dmn:decision id="_776AA686-DB93-4688-AAF6-837AD2D3FB44" name="result">
+    <dmn:extensionElements/>
+    <dmn:variable id="_76E08C6A-3013-41D8-B08B-B88DCE8BE808" name="result" typeRef="string"/>
+    <dmn:informationRequirement id="_7E2A88F9-DF61-4545-94B1-BEC60412FFF0">
+      <dmn:requiredInput href="#_C1C40558-BE32-4782-B7A1-155F3B62AFB5"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_2406F297-CB6D-45BC-8C69-D52797C6BCBE">
+      <dmn:requiredInput href="#_638AA7FF-9131-4BAC-BA57-11F8AFEA628F"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_D7ADAA2D-4B48-47DF-8E77-EC44FA1747CB" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_467BF965-405F-43BE-BDC9-3709F06D6361">
+        <dmn:inputExpression id="_85ACCD24-9081-4FE0-BD15-530C757ED4A1" typeRef="boolean">
+          <dmn:text>checkInvTotPerm</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_49A3DF77-2BFE-4EE1-A684-BC74129A77BB">
+        <dmn:inputExpression id="_F40C2A8B-E2A9-4D14-8889-8DBA7912F7C6" typeRef="number">
+          <dmn:text>saInvTotPerm</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_690060F6-B2DF-4CD6-8400-8EC58BAE2429"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_1935B36A-73B6-4DF4-A168-CFAC39BCA946">
+        <dmn:inputEntry id="_CC77964B-3FB8-4301-9039-BE134105E2B1">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EB76E693-E57D-4D5F-8657-8502745A0BF0">
+          <dmn:text>&lt;=0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_4825159B-5BCC-4346-B39A-BE7D750E66A5">
+          <dmn:text>"La suma asegurada no puede ser igual o menor a cero"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_16C05E8E-ADAA-45E2-983A-17F31E7256E0">
+        <dmn:inputEntry id="_CFCEF149-2FA1-47C0-8D72-7495C20CAEB8">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EA16115E-6B23-45BB-AE8A-7FCBD82EC686">
+          <dmn:text>(0..700000]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_63C451E2-91D6-4A14-B668-166909FD9F55">
+          <dmn:text>""</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_7841D4BA-008F-4C06-881C-DE0ECF408EE4">
+        <dmn:inputEntry id="_EEB68F18-AECE-4055-97C0-FF1D7C1183F4">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C257FE78-6996-4920-8AF2-2C853E6E097C">
+          <dmn:text>&gt;700000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_AF48629E-EACE-4058-8E70-8CF10121A806">
+          <dmn:text>"La suma asegurada no puede ser mayor a 700.000,00"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_80F551AC-F4AF-4992-998E-36FBBE8B2BCC">
+        <dmn:inputEntry id="_A62A07AE-E126-4F23-93D0-840C555E3111">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E158B8F2-2416-4A4A-9483-B681A81B297D">
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_94253CD5-17FF-417B-AA41-1F7C27D01986">
+          <dmn:text>"Debe indicar una suma asegurada"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_558712BB-E84B-46A0-BEBE-56E931BE58DB">
+        <dmn:inputEntry id="_BCD68854-5C6F-472F-A9C7-6765CF197852">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_333DE609-71EB-4345-9E40-DCA0DE9D1E2E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_96345873-F3BC-45F3-BE2B-6CB1515B44E2">
+          <dmn:text>""</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:inputData id="_638AA7FF-9131-4BAC-BA57-11F8AFEA628F" name="saInvTotPerm">
+    <dmn:extensionElements/>
+    <dmn:variable id="_1C1DE8A7-E082-43C7-B81A-847F21FD802F" name="saInvTotPerm" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:inputData id="_C1C40558-BE32-4782-B7A1-155F3B62AFB5" name="checkInvTotPerm">
+    <dmn:extensionElements/>
+    <dmn:variable id="_BEA12ABA-D16D-4059-9502-9CD9C7E8128F" name="checkInvTotPerm" typeRef="boolean"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_0B7373A6-DF87-4372-B203-E02365CC5B17" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_D7ADAA2D-4B48-47DF-8E77-EC44FA1747CB">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>117</kie:width>
+            <kie:width>260</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_776AA686-DB93-4688-AAF6-837AD2D3FB44" dmnElementRef="_776AA686-DB93-4688-AAF6-837AD2D3FB44" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="182" y="96" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_638AA7FF-9131-4BAC-BA57-11F8AFEA628F" dmnElementRef="_638AA7FF-9131-4BAC-BA57-11F8AFEA628F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="181" y="229" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_C1C40558-BE32-4782-B7A1-155F3B62AFB5" dmnElementRef="_C1C40558-BE32-4782-B7A1-155F3B62AFB5" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="371" y="156" width="121" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_7E2A88F9-DF61-4545-94B1-BEC60412FFF0-AUTO-TARGET" dmnElementRef="_7E2A88F9-DF61-4545-94B1-BEC60412FFF0">
+        <di:waypoint x="431.5" y="181"/>
+        <di:waypoint x="232" y="146"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_2406F297-CB6D-45BC-8C69-D52797C6BCBE-AUTO-TARGET" dmnElementRef="_2406F297-CB6D-45BC-8C69-D52797C6BCBE">
+        <di:waypoint x="231" y="254"/>
+        <di:waypoint x="232" y="146"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
