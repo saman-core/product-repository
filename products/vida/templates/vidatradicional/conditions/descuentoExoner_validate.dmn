@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_123B7DCD-5CCE-4B7B-AF4C-DF9FC8216175" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_DCCF4842-0BBA-44E8-9953-B206A18FAADB" name="descuentoExoner_validate" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/descuentoExoner_validate">
+  <dmn:extensionElements/>
+  <dmn:decision id="_405C9FEE-1D12-47A1-9CF6-7796AEBE327F" name="result">
+    <dmn:extensionElements/>
+    <dmn:variable id="_2BE62D2E-2948-491E-A9E2-B0749D4194BE" name="result" typeRef="string"/>
+    <dmn:informationRequirement id="_217F6654-CB02-4F2C-892E-8B236059E62B">
+      <dmn:requiredInput href="#_E0D7E081-D723-46E3-BCAA-E1115E7CE34A"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_5DAC274C-5525-4E98-A9A7-19A33BF1BBF6">
+      <dmn:requiredInput href="#_951572D5-9315-4315-AEC1-E624546F5ED4"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_62C3BD44-0C36-4921-8723-212918A1312B" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_514AB99B-A4B5-4A3C-9398-D3D0F15C206B">
+        <dmn:inputExpression id="_767564AB-E839-4F6A-9FBD-F288EDC525DD" typeRef="boolean">
+          <dmn:text>checkExoneracion</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_48A59F8F-8F1D-4F40-8EBD-C2F5CAF59990">
+        <dmn:inputExpression id="_D4A0723A-A5D5-47A5-B280-B79E4D22C0B5" typeRef="number">
+          <dmn:text>primaExoneracion</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_F0DEA0B3-BC34-49D5-BCF2-426761C21CCD"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_07F2534E-C70E-4098-A766-2B4F09D6C365">
+        <dmn:inputEntry id="_5DF36BCD-ADB7-49A2-8008-678D9A74D335">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4E210CE0-954C-4529-85D2-488CF0E682A3">
+          <dmn:text>&lt;=0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_9A6A4F1F-D5FE-43DD-BC80-5213815AE995">
+          <dmn:text>"El descuento no puede ser mayor o igual a la prima"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_F4AA8D4A-CDE4-4E96-8040-4E317F7EF02E">
+        <dmn:inputEntry id="_3B7F2B1E-6B76-44F3-A4CC-9C8161AA7B4C">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D2EE9A52-B694-4064-B1E4-EBCD045237B2">
+          <dmn:text>&gt;0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_2EF19417-61D2-41B6-AAE4-1CE8F9D4C92E">
+          <dmn:text>""</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_3E9FA7CF-06D7-4A87-8C86-BA0E4C3F3F5A">
+        <dmn:inputEntry id="_3279EC41-D126-498E-BE2E-22C90EEE00A7">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8D70F754-79F4-4D3C-BD15-4DDE944DEA5C">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_B08E1156-469F-476B-82E8-A9F9A43BF99E">
+          <dmn:text>""</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:inputData id="_E0D7E081-D723-46E3-BCAA-E1115E7CE34A" name="primaExoneracion">
+    <dmn:extensionElements/>
+    <dmn:variable id="_A1C9D13A-FA03-4A93-8BF5-E3775D99408E" name="primaExoneracion" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:inputData id="_951572D5-9315-4315-AEC1-E624546F5ED4" name="checkExoneracion">
+    <dmn:extensionElements/>
+    <dmn:variable id="_2AC95AD6-107E-4B5F-8599-4691E6C6E772" name="checkExoneracion" typeRef="boolean"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_F399083A-F97B-4C22-9C87-5808DF330A8C" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_62C3BD44-0C36-4921-8723-212918A1312B">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>214</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_405C9FEE-1D12-47A1-9CF6-7796AEBE327F" dmnElementRef="_405C9FEE-1D12-47A1-9CF6-7796AEBE327F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="203" y="105" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_E0D7E081-D723-46E3-BCAA-E1115E7CE34A" dmnElementRef="_E0D7E081-D723-46E3-BCAA-E1115E7CE34A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="188" y="246" width="129" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_951572D5-9315-4315-AEC1-E624546F5ED4" dmnElementRef="_951572D5-9315-4315-AEC1-E624546F5ED4" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="360" y="166" width="126" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_217F6654-CB02-4F2C-892E-8B236059E62B" dmnElementRef="_217F6654-CB02-4F2C-892E-8B236059E62B">
+        <di:waypoint x="252.5" y="271"/>
+        <di:waypoint x="253" y="130"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_5DAC274C-5525-4E98-A9A7-19A33BF1BBF6-AUTO-TARGET" dmnElementRef="_5DAC274C-5525-4E98-A9A7-19A33BF1BBF6">
+        <di:waypoint x="423" y="191"/>
+        <di:waypoint x="253" y="155"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
