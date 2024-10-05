@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_EA50994D-95C5-4045-9AB6-6D6777DC6431" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_EE6308BC-2E40-44FC-9414-067DCCA59FF8" name="primaEnfGraves_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaEnfGraves_value">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/primaEnfGraves_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_EE6308BC-2E40-44FC-9414-067DCCA59FF8" name="primaEnfGraves_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaEnfGraves_value">
   <dmn:extensionElements/>
   <dmn:decision id="_BE09E17E-8405-42BD-BA92-ECB68968BAF1" name="result">
     <dmn:extensionElements/>
@@ -29,7 +29,7 @@
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_37684214-0F92-4361-BD5E-F73F3BED6F15">
-          <dmn:text>saEnfGraves*tasaEnfGraves - descuentoEnfGrav</dmn:text>
+          <dmn:text>(saEnfGraves*tasaEnfGraves/1000) - descuentoEnfGrav</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
