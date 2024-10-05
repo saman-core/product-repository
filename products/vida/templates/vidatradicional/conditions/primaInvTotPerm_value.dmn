@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_761FD34C-979E-415D-AA5C-94E8DD3A318B" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_99A38EE5-2254-4F4A-AB38-205BDE0A165E" name="primaInvTotPerm_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaInvTotPerm_value">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/primaInvTotPerm_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_99A38EE5-2254-4F4A-AB38-205BDE0A165E" name="primaInvTotPerm_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaInvTotPerm_value">
   <dmn:extensionElements/>
   <dmn:decision id="_C1A8E14A-AFED-4530-B083-026216D90BAC" name="result">
     <dmn:extensionElements/>
@@ -29,7 +29,7 @@
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_FF20930B-A176-444A-8026-7CF1310E60E1">
-          <dmn:text>saInvTotPerm*tasaInvTotPerm - descuentoInvTotPerm</dmn:text>
+          <dmn:text>(saInvTotPerm*tasaInvTotPerm/1000) - descuentoInvTotPerm</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
