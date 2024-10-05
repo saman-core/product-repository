@@ -29,7 +29,7 @@
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_08F0A0E6-3520-4AFA-B970-BF21575B1464">
-          <dmn:text>saFallecimiento*tasaFallecimiento - descuentoFallec</dmn:text>
+          <dmn:text>(saFallecimiento*tasaFallecimiento/1000) - descuentoFallec</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
