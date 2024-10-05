@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_76BDD660-8EC3-43CD-A3E9-4216B9983448" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_6782C067-71DA-4493-A796-D4ED793A9E5A" name="primaSobrevivencia_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaSobrevivencia_value">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/primaSobrevivencia_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_6782C067-71DA-4493-A796-D4ED793A9E5A" name="primaSobrevivencia_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/primaSobrevivencia_value">
   <dmn:extensionElements/>
   <dmn:decision id="_94EE3D5A-6491-4350-AB89-F942E4AE300D" name="result">
     <dmn:extensionElements/>
@@ -29,7 +29,7 @@
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_69028FBB-BAF6-4786-B9C4-1F815BC4E4A4">
-          <dmn:text>saSobrevivencia*tasaSobrevivencia - descuentoSobrev</dmn:text>
+          <dmn:text>(saSobrevivencia*tasaSobrevivencia/1000) - descuentoSobrev</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
