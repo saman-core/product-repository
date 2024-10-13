@@ -1,1 +1,2220 @@
-{"properties":["botonCalcular","checkEnfGraves","checkExoneracion","checkFallecimiento","checkInvTotPerm","checkSobrevivencia","cobCol10","cobCol11","cobCol12","cobCol13","cobCol14","cobCol3","cobCol4","cobCol5","cobCol6","cobCol7","cobCol9","descuentoEnfGrav","descuentoExoner","descuentoFallec","descuentoInvTotPerm","descuentoSobrev","direccionTomador","duracionDelContrato","edadAseg","fechaInicio1","fechaInicio3","formaDePago","formaDePago3","fumadorAseg","hora","html","html1","html2","html6","html7","html8","moneda","moneda1","nomCompTomador","nomCompTomador1","ocupacionAseg","oficina","oficina1","oficina2","primaEnfGraves","primaExoneracion","primaFallec","primaInvTotPerm","primaSobrevivencia","primaTotal","producto","saEnfGraves","saExoneracion","saFallecimiento","saInvTotPerm","saSobrevivencia","segNomTomador","segNomTomador1","segNomTomador2","segNomTomador3","sexoAseg","tasaEnfGraves","tasaExoneracion","tasaFallecimiento","tasaInvTotPerm","tasaSobrevivencia","tipoDoc","tipoDoc1"],"components":[{"label":"HTML","className":"wrap","attrs":[{"attr":"","value":""}],"content":"<img src=\"https://theforeignbot.com/images/Header_Vida.png\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">","refreshOnChange":false,"key":"html","type":"samanHtmlelement","input":false,"tableView":false},{"title":"Datos de Póliza","tooltip":"A continuació se presentan los atributos estándar de póliza","collapsible":true,"key":"datosDePoliza","type":"samanPanel","label":"Panel","collapsed":false,"input":false,"tableView":false,"components":[{"label":"HTML","className":"wrap","attrs":[{"attr":"","value":""}],"content":"<img src=\"https://theforeignbot.com/images/Poliza.jpeg\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">\n\n\n\n\n","refreshOnChange":false,"key":"html2","type":"samanHtmlelement","input":false,"tableView":false},{"label":"Policy_Row_1","columns":[{"components":[{"label":"Producto","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"Vida Entera","value":"101"},{"label":"Dotal","value":"201"},{"label":"Temporal","value":"301"},{"label":"Temporal Con Devolución","value":"302"}]},"valueProperty":"id","validate":{"required":true,"select":false},"key":"producto","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":4,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":4},{"components":[{"label":"Efecto Póliza","format":"dd-MM-yyyy","tableView":false,"datePicker":{"disableWeekends":false,"disableWeekdays":false,"minDate":"moment().add(-20,'days').calendar()"},"enableTime":false,"timePicker":{"showMeridian":false,"hourStep":12,"minuteStep":0},"defaultDate":"moment()","enableMinDateInput":true,"enableMaxDateInput":false,"key":"fechaInicio1","type":"samanDatetime","input":true,"widget":{"type":"calendar","displayInTimezone":"viewer","locale":"en","useLocaleSettings":false,"allowInput":true,"mode":"single","enableTime":false,"noCalendar":false,"format":"dd-MM-yyyy","hourIncrement":12,"minuteIncrement":0,"time_24hr":true,"minDate":"moment().add(-20,'days').calendar()","disableWeekends":false,"disableWeekdays":false,"maxDate":null},"keyModified":true}],"width":2,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":2},{"components":[{"label":"Duración","suffix":"años","applyMaskOn":"change","mask":false,"tableView":false,"arbitraryPrecision":false,"delimiter":false,"requireDecimal":false,"inputFormat":"plain","truncateMultipleSpaces":false,"validate":{"required":true},"key":"duracionDelContrato","type":"samanNumber","input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":"Vencimiento Póliza","format":"dd-MM-yyyy","disabled":true,"tableView":false,"datePicker":{"disableWeekends":false,"disableWeekdays":false},"enableTime":false,"timePicker":{"showMeridian":false,"hourStep":12,"minuteStep":0},"defaultDate":"moment().add(1, 'years')","redrawOn":"fechaInicio1","enableMinDateInput":false,"enableMaxDateInput":false,"key":"fechaInicio3","type":"samanDatetime","input":true,"widget":{"type":"calendar","displayInTimezone":"viewer","locale":"en","useLocaleSettings":false,"allowInput":true,"mode":"single","enableTime":false,"noCalendar":false,"format":"dd-MM-yyyy","hourIncrement":12,"minuteIncrement":0,"time_24hr":true,"minDate":null,"disableWeekends":false,"disableWeekdays":false,"maxDate":null},"keyModified":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":"Hora","tabindex":"5","tableView":true,"defaultValue":"12:00:00","key":"hora","type":"samanTime","input":true,"inputMask":"99:99"}],"size":"md","width":2,"currentWidth":2}],"key":"policyRow1","type":"samanColumns","input":false,"tableView":false},{"label":"Columns","columns":[{"components":[{"label":"Moneda","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"USD","value":"usd"},{"label":"EUR","value":"eur"},{"label":"GBP","value":"gbp"},{"label":"JPY","value":"jpy"}]},"valueProperty":"id","validate":{"select":false},"key":"moneda","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":6,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":6},{"components":[{"label":"Prorrogable","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"Renovable","value":"Si"},{"label":"No Renovable","value":"No"}]},"valueProperty":"id","validate":{"select":false},"key":"moneda1","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":6,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":6}],"key":"columns","type":"samanColumns","input":false,"tableView":false},{"label":"Policy_Row_2","columns":[{"components":[{"label":"Distrito","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"Lisboa","value":"1"},{"label":"Leiría","value":"2"},{"label":"Santarém","value":"3"},{"label":"Setúbal","value":"4"},{"label":"Beja","value":"5"},{"label":"Faro","value":"6"},{"label":"Évora","value":"7"},{"label":"Portalegre","value":"8"},{"label":"Castelo Branco","value":"9"},{"label":"Guarda","value":"10"},{"label":"Coímbra","value":"11"},{"label":"Aveiro","value":"12"},{"label":"Viseu","value":"13"},{"label":"Bragança","value":"14"},{"label":"Vila Real","value":"15"},{"label":"Oporto","value":"16"},{"label":"Braga","value":"17"},{"label":"Viana do Castelo","value":"18"}]},"valueProperty":"id","validate":{"required":true,"select":false},"key":"oficina","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":4,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":4},{"components":[{"label":"Municipio","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"Alenquer","value":"100"},{"label":"Amadora","value":"101"},{"label":"Arruda dos Vinhos","value":"102"},{"label":"Azambuja","value":"103"},{"label":"Cadaval","value":"104"},{"label":"Cascaes","value":"105"},{"label":"Lisboa","value":"106"},{"label":"Loures","value":"107"},{"label":"Lourinhã","value":"108"},{"label":"Mafra","value":"109"},{"label":"Odivelas","value":"110"},{"label":"Oeiras","value":"111"},{"label":"Sintra","value":"112"},{"label":"Sobral de Monte Agraço","value":"113"},{"label":"Torres Vedras","value":"114"},{"label":"Vila Franca de Xira","value":"115"}]},"valueProperty":"id","refreshOn":"oficina","validate":{"required":true,"select":false},"key":"oficina1","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":4,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":4},{"components":[{"label":"Oficina","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"Lisboa - Alenquer - Of1","value":"1011"},{"label":"Lisboa - Alenquer - Of2","value":"1012"},{"label":"Lisboa - Alenquer - Of3","value":"1013"},{"label":"Lisboa - Amadora - Of1","value":"1021"},{"label":"Lisboa - Amadora - Of2","value":"1022"},{"label":"Lisboa - Azambuja - Of3","value":"1031"}]},"valueProperty":"id","refreshOn":"oficina","validate":{"required":true,"select":false},"key":"oficina2","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"size":"md","width":4,"currentWidth":4}],"key":"policyRow2","type":"samanColumns","input":false,"tableView":false}]},{"title":"Datos del Tomador","collapsible":true,"key":"datosDelTomador","type":"samanPanel","label":"Panel","collapsed":false,"input":false,"tableView":false,"components":[{"label":"HTML","className":"wrap","attrs":[{"attr":"","value":""}],"content":"<img src=\"https://theforeignbot.com/images/Contratante.jpg\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">\n\n\n\n\n","refreshOnChange":false,"key":"html6","type":"samanHtmlelement","input":false,"tableView":false},{"label":"DatosTomador","columns":[{"components":[{"label":"Tipo Doc.","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"DNI","value":"1"},{"label":"PAS","value":"2"},{"label":"NIF","value":"3"}]},"valueProperty":"id","validate":{"select":false},"key":"tipoDoc","tags":["TipoDocumento"],"type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":2,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":2},{"components":[{"label":"Número Documento","applyMaskOn":"change","tableView":true,"key":"segNomTomador","tags":["SegundoNombreTomador"],"type":"samanTextfield","input":true}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":4,"width":4},{"components":[{"label":"Nombre Completo","applyMaskOn":"change","tableView":true,"key":"nomCompTomador","tags":["NombreCompletoTomador"],"type":"samanTextfield","input":true}],"size":"md","width":6,"currentWidth":6}],"key":"datosTomador","type":"samanColumns","input":false,"tableView":false},{"label":"Dirección de Habitación","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"Calle Berlín 9 Bis, CP 11600, CDMX, México","value":"1"},{"label":"Calle Los Tucanes 233, Lima, Perú","value":"2"}]},"valueProperty":"id","validate":{"select":false},"key":"direccionTomador","tags":["DireccionTomador"],"type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"},{"label":"Forma de Pago","columns":[{"components":[{"label":"Medio de Pago","widget":"choicesjs","tableView":true,"defaultValue":2,"data":{"values":[{"label":"Debito","value":"1"},{"label":"Crédito","value":"2"},{"label":"Domiciliación","value":"4"},{"label":"Efectivo","value":"3"}]},"valueProperty":"id","validate":{"select":false},"key":"formaDePago","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":4,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":4},{"components":[{"label":"Datos Medio de Pago","applyMaskOn":"change","tableView":true,"key":"segNomTomador1","tags":["SegundoNombreTomador"],"type":"samanTextfield","input":true}],"width":6,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":6}],"key":"formaDePago1","type":"samanColumns","input":false,"tableView":false},{"label":"Forma de Pago","columns":[{"components":[{"label":"Medio de Contacto","widget":"choicesjs","tableView":true,"defaultValue":2,"data":{"values":[{"label":"Móvil","value":"1"},{"label":"Teléfono Fijo","value":"2"},{"label":"Email","value":"4"},{"label":"Correspondencia","value":"3"}]},"valueProperty":"id","validate":{"select":false},"key":"formaDePago3","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":4,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":4},{"components":[{"label":"Datos Medio de Contacto","applyMaskOn":"change","tableView":true,"key":"segNomTomador2","tags":["SegundoNombreTomador"],"type":"samanTextfield","input":true}],"width":6,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":6}],"key":"formaDePago2","type":"samanColumns","input":false,"tableView":false}]},{"title":"Datos del Riesgo","collapsible":true,"key":"datosDelRiesgo","type":"samanPanel","label":"Panel","collapsed":false,"input":false,"tableView":false,"components":[{"label":"HTML","className":"wrap","attrs":[{"attr":"","value":""}],"content":"<img src=\"https://theforeignbot.com/images/Riesgo.jpg\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">\n\n\n\n\n","refreshOnChange":false,"key":"html8","type":"samanHtmlelement","input":false,"tableView":false},{"label":"DatosTomador","columns":[{"components":[{"label":"Tipo Doc.","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"DNI","value":"1"},{"label":"PAS","value":"2"},{"label":"NIF","value":"3"}]},"valueProperty":"id","validate":{"select":false},"key":"tipoDoc1","tags":["TipoDocumento"],"type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"width":2,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":2},{"components":[{"label":"Número Documento","applyMaskOn":"change","tableView":true,"key":"segNomTomador3","tags":["SegundoNombreTomador"],"type":"samanTextfield","input":true}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":4,"width":4},{"components":[{"label":"Nombre Completo","applyMaskOn":"change","tableView":true,"key":"nomCompTomador1","tags":["NombreCompletoTomador"],"type":"samanTextfield","input":true}],"size":"md","width":6,"currentWidth":6}],"key":"datosTomador1","type":"samanColumns","input":false,"tableView":false},{"label":"DatosRiesgo","columns":[{"components":[{"label":"Edad","applyMaskOn":"change","mask":false,"tableView":false,"arbitraryPrecision":false,"delimiter":false,"requireDecimal":false,"inputFormat":"plain","truncateMultipleSpaces":false,"validate":{"required":true},"key":"edadAseg","type":"samanNumber","input":true}],"width":2,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":2},{"components":[{"label":"Sexo","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"Masculino","value":"M"},{"label":"Femenino","value":"F"}]},"valueProperty":"id","validate":{"required":true,"select":false},"key":"sexoAseg","type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":2,"width":2},{"components":[{"label":"Fumador","widget":"choicesjs","tableView":true,"data":{"values":[{"label":"Si","value":"si"},{"label":"No","value":"no"}]},"valueProperty":"id","validate":{"required":true,"select":false},"key":"fumadorAseg","tags":["Fumador"],"type":"samanSelect","searchField":"label__regex","authenticate":true,"input":true,"idPath":"value"}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":"Ocupación","widget":"choicesjs","tableView":true,"dataSrc":"resource","data":{"resource":"occupation"},"valueProperty":"id","validate":{"select":false},"key":"ocupacionAseg","type":"samanSelect","searchField":"label__regex","noRefreshOnScroll":false,"authenticate":true,"input":true}],"size":"md","width":6,"currentWidth":6}],"key":"datosTomador2","type":"samanColumns","input":false,"tableView":false}]},{"title":"Coberturas","collapsible":true,"key":"coberturas","type":"samanPanel","label":"Panel","collapsed":false,"input":false,"tableView":false,"components":[{"label":"HTML","className":"wrap","attrs":[{"attr":"","value":""}],"content":"<img src=\"https://theforeignbot.com/images/Cobertura.jpg\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">\n\n\n\n\n","refreshOnChange":false,"key":"html7","type":"samanHtmlelement","input":false,"tableView":false},{"label":"Columns3","columns":[{"components":[{"html":"<p><strong>COB. PRINCIPALES</strong></p>","label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol3","type":"samanContent","input":false,"tableView":false}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":3,"width":3},{"components":[{"html":"<p style=\"text-align:right;\"><strong>SUMA ASEGURADA &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></p>","label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol5","type":"samanContent","input":false,"tableView":false}],"size":"md","width":3,"offset":0,"push":0,"pull":0,"currentWidth":3},{"components":[{"html":"<p style=\"text-align:center;\"><strong>TASA</strong></p>","label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol4","type":"samanContent","input":false,"tableView":false}],"size":"md","width":2,"currentWidth":2,"offset":0,"push":0,"pull":0},{"components":[{"html":"<p style=\"text-align:center;\"><strong>DESCUENTO</strong></p>","label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol6","type":"samanContent","input":false,"tableView":false}],"size":"md","width":2,"currentWidth":2},{"components":[{"html":"<p style=\"text-align:center;\"><strong>PRIMA ANUAL</strong></p>","label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol7","type":"samanContent","input":false,"tableView":false}],"size":"md","width":2,"currentWidth":2}],"key":"columns8","type":"samanColumns","input":false,"tableView":false},{"label":"Columns3","columns":[{"components":[{"label":"check","hideLabel":true,"tableView":false,"defaultValue":true,"key":"checkFallecimiento","type":"samanCheckbox","input":true,"labelPosition":"left","keyModified":true}],"width":1,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":1},{"components":[{"label":"FALLECIMIENTO","labelPosition":"left-left","applyMaskOn":"change","customClass":"padding: 20px","mask":false,"tableView":false,"defaultValue":50000,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"saFallecimiento","type":"samanNumber","labelWidth":55,"labelMargin":2,"decimalLimit":2,"input":true}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":5,"width":5},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"tasaFallecimiento","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"tableView":false,"defaultValue":0,"longNumber":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"descuentoFallec","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"arbitraryPrecision":false,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"primaFallec","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2}],"key":"columns3","type":"samanColumns","input":false,"tableView":false},{"label":"Columns3","columns":[{"components":[{"label":"check","hideLabel":true,"tableView":false,"defaultValue":true,"key":"checkSobrevivencia","type":"samanCheckbox","input":true,"labelPosition":"left","keyModified":true}],"width":1,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":1},{"components":[{"label":"SOBREVIVENCIA","labelPosition":"left-left","applyMaskOn":"change","customClass":"padding: 20px","mask":false,"tableView":false,"defaultValue":50000,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"saSobrevivencia","type":"samanNumber","labelWidth":55,"labelMargin":2,"decimalLimit":2,"input":true}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":5,"width":5},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"tasaSobrevivencia","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"tableView":false,"defaultValue":0,"longNumber":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"descuentoSobrev","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"arbitraryPrecision":false,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"primaSobrevivencia","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2}],"key":"columns4","type":"samanColumns","input":false,"tableView":false},{"label":"Columns3","columns":[{"components":[{"html":"<p><strong>COB. ADICIONALES</strong></p>","label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol9","type":"samanContent","input":false,"tableView":false}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":3,"width":3},{"components":[{"label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol10","type":"samanContent","input":false,"tableView":false}],"size":"md","width":3,"offset":0,"push":0,"pull":0,"currentWidth":3},{"components":[{"label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol11","type":"samanContent","input":false,"tableView":false}],"size":"md","width":2,"currentWidth":2,"offset":0,"push":0,"pull":0},{"components":[{"label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol12","type":"samanContent","input":false,"tableView":false}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol13","type":"samanContent","input":false,"tableView":false}],"size":"md","width":2,"currentWidth":2}],"key":"columns9","type":"samanColumns","input":false,"tableView":false},{"label":"Columns3","columns":[{"components":[{"label":"check","hideLabel":true,"tableView":false,"defaultValue":true,"key":"checkExoneracion","type":"samanCheckbox","input":true,"labelPosition":"left","keyModified":true}],"width":1,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":1},{"components":[{"label":"EXON. DE PAGO DE PRIMAS","labelPosition":"left-left","applyMaskOn":"change","customClass":"padding: 20px","mask":false,"tableView":false,"defaultValue":50000,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"saExoneracion","type":"samanNumber","labelWidth":55,"labelMargin":2,"decimalLimit":2,"input":true}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":5,"width":5},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"tasaExoneracion","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"tableView":false,"defaultValue":0,"longNumber":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"descuentoExoner","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"arbitraryPrecision":false,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"primaExoneracion","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2}],"key":"columns5","type":"samanColumns","input":false,"tableView":false},{"label":"Columns3","columns":[{"components":[{"label":"check","hideLabel":true,"tableView":false,"defaultValue":true,"key":"checkEnfGraves","type":"samanCheckbox","input":true,"labelPosition":"left","keyModified":true}],"width":1,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":1},{"components":[{"label":"ENFERMEDADES GRAVES","labelPosition":"left-left","applyMaskOn":"change","customClass":"padding: 20px","mask":false,"tableView":false,"defaultValue":50000,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"saEnfGraves","type":"samanNumber","labelWidth":55,"labelMargin":2,"decimalLimit":2,"input":true}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":5,"width":5},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"tasaEnfGraves","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"tableView":false,"defaultValue":0,"longNumber":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"descuentoEnfGrav","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"arbitraryPrecision":false,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"primaEnfGraves","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2}],"key":"columns7","type":"samanColumns","input":false,"tableView":false},{"label":"Columns3","columns":[{"components":[{"label":"check","hideLabel":true,"tableView":false,"defaultValue":false,"key":"checkInvTotPerm","type":"samanCheckbox","input":true,"labelPosition":"left","keyModified":true}],"width":1,"offset":0,"push":0,"pull":0,"size":"md","currentWidth":1},{"components":[{"label":"INV. TOTAL Y PERMANENTE","labelPosition":"left-left","applyMaskOn":"change","customClass":"padding: 20px","mask":false,"tableView":false,"defaultValue":50000,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"saInvTotPerm","type":"samanNumber","labelWidth":55,"labelMargin":2,"decimalLimit":2,"input":true}],"offset":0,"push":0,"pull":0,"size":"md","currentWidth":5,"width":5},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"tasaInvTotPerm","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"tableView":false,"defaultValue":0,"longNumber":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"descuentoInvTotPerm","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"arbitraryPrecision":false,"input":true}],"size":"md","width":2,"currentWidth":2},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"primaInvTotPerm","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2}],"key":"columns6","type":"samanColumns","input":false,"tableView":false},{"label":"HTML","attrs":[{"attr":"","value":""}],"content":"<br></br>","refreshOnChange":false,"key":"html1","type":"samanHtmlelement","input":false,"tableView":false},{"label":"Columns3","columns":[{"components":[{"label":"Boton_Calcular","attrs":[{"attr":"","value":""}],"content":"<div style=\"text-align: right;\">\n<button style=\"padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;\">Calcular</button>\n</div>\n","refreshOnChange":false,"key":"botonCalcular","type":"samanHtmlelement","input":false,"tableView":false}],"size":"md","width":8,"currentWidth":8,"offset":0,"push":0,"pull":0},{"components":[{"html":"<p style=\"text-align:right;\"><strong>PRIMA TOTAL</strong></p>","label":"Cob_Col_1","refreshOnChange":false,"key":"cobCol14","type":"samanContent","input":false,"tableView":false}],"size":"md","width":2,"currentWidth":2,"offset":0,"push":0,"pull":0},{"components":[{"label":".","labelPosition":"right-left","applyMaskOn":"change","mask":false,"disabled":true,"tableView":false,"defaultValue":0,"arbitraryPrecision":false,"delimiter":true,"requireDecimal":true,"inputFormat":"plain","truncateMultipleSpaces":false,"key":"primaTotal","type":"samanNumber","labelWidth":0,"labelMargin":0,"decimalLimit":2,"input":true}],"size":"md","width":2,"currentWidth":2}],"key":"columns10","type":"samanColumns","input":false,"tableView":false}]}]}
+{
+    "properties": [
+        "botonCalcular",
+        "checkEnfGraves",
+        "checkExoneracion",
+        "checkFallecimiento",
+        "checkInvTotPerm",
+        "checkSobrevivencia",
+        "cobCol10",
+        "cobCol11",
+        "cobCol12",
+        "cobCol13",
+        "cobCol14",
+        "cobCol3",
+        "cobCol4",
+        "cobCol5",
+        "cobCol6",
+        "cobCol7",
+        "cobCol9",
+        "descuentoEnfGrav",
+        "descuentoExoner",
+        "descuentoFallec",
+        "descuentoInvTotPerm",
+        "descuentoSobrev",
+        "direccionTomador",
+        "duracionDelContrato",
+        "edadAseg",
+        "fechaInicio1",
+        "fechaInicio3",
+        "formaDePago",
+        "formaDePago3",
+        "fumadorAseg",
+        "hora",
+        "html",
+        "html1",
+        "html2",
+        "html6",
+        "html7",
+        "html8",
+        "moneda",
+        "moneda1",
+        "nomCompTomador",
+        "nomCompTomador1",
+        "ocupacionAseg",
+        "oficina",
+        "oficina1",
+        "oficina2",
+        "primaEnfGraves",
+        "primaExoneracion",
+        "primaFallec",
+        "primaInvTotPerm",
+        "primaSobrevivencia",
+        "primaTotal",
+        "producto",
+        "saEnfGraves",
+        "saExoneracion",
+        "saFallecimiento",
+        "saInvTotPerm",
+        "saSobrevivencia",
+        "segNomTomador",
+        "segNomTomador1",
+        "segNomTomador2",
+        "segNomTomador3",
+        "sexoAseg",
+        "tasaEnfGraves",
+        "tasaExoneracion",
+        "tasaFallecimiento",
+        "tasaInvTotPerm",
+        "tasaSobrevivencia",
+        "tipoDoc",
+        "tipoDoc1"
+    ],
+    "components": [
+        {
+            "label": "HTML",
+            "className": "wrap",
+            "attrs": [
+                {
+                    "attr": "",
+                    "value": ""
+                }
+            ],
+            "content": "<img src=\"https://theforeignbot.com/images/Header_Vida.png\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">",
+            "refreshOnChange": false,
+            "key": "html",
+            "type": "samanHtmlelement",
+            "input": false,
+            "tableView": false
+        },
+        {
+            "title": "Datos de Póliza",
+            "tooltip": "A continuació se presentan los atributos estándar de póliza",
+            "collapsible": true,
+            "key": "datosDePoliza",
+            "type": "samanPanel",
+            "label": "Panel",
+            "collapsed": false,
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "HTML",
+                    "className": "wrap",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<img src=\"https://theforeignbot.com/images/Poliza.jpeg\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">\n\n\n\n\n",
+                    "refreshOnChange": false,
+                    "key": "html2",
+                    "type": "samanHtmlelement",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Policy_Row_1",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Producto",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Vida Entera",
+                                                "value": "101"
+                                            },
+                                            {
+                                                "label": "Dotal",
+                                                "value": "201"
+                                            },
+                                            {
+                                                "label": "Temporal",
+                                                "value": "301"
+                                            },
+                                            {
+                                                "label": "Temporal Con Devolución",
+                                                "value": "302"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "required": true,
+                                        "select": false
+                                    },
+                                    "key": "producto",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 4,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 4
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Efecto Póliza",
+                                    "format": "dd-MM-yyyy",
+                                    "tableView": false,
+                                    "datePicker": {
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false,
+                                        "minDate": "moment().add(-20,'days').calendar()"
+                                    },
+                                    "enableTime": false,
+                                    "timePicker": {
+                                        "showMeridian": false,
+                                        "hourStep": 12,
+                                        "minuteStep": 0
+                                    },
+                                    "defaultDate": "moment()",
+                                    "enableMinDateInput": true,
+                                    "enableMaxDateInput": false,
+                                    "key": "fechaInicio1",
+                                    "type": "samanDatetime",
+                                    "input": true,
+                                    "widget": {
+                                        "type": "calendar",
+                                        "displayInTimezone": "viewer",
+                                        "locale": "en",
+                                        "useLocaleSettings": false,
+                                        "allowInput": true,
+                                        "mode": "single",
+                                        "enableTime": false,
+                                        "noCalendar": false,
+                                        "format": "dd-MM-yyyy",
+                                        "hourIncrement": 12,
+                                        "minuteIncrement": 0,
+                                        "time_24hr": true,
+                                        "minDate": "moment().add(-20,'days').calendar()",
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false,
+                                        "maxDate": null
+                                    },
+                                    "keyModified": true
+                                }
+                            ],
+                            "width": 2,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Duración",
+                                    "suffix": "años",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": false,
+                                    "requireDecimal": false,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "duracionDelContrato",
+                                    "type": "samanNumber",
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Vencimiento Póliza",
+                                    "format": "dd-MM-yyyy",
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "datePicker": {
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false
+                                    },
+                                    "enableTime": false,
+                                    "timePicker": {
+                                        "showMeridian": false,
+                                        "hourStep": 12,
+                                        "minuteStep": 0
+                                    },
+                                    "defaultDate": "moment().add(1, 'years')",
+                                    "redrawOn": "fechaInicio1",
+                                    "enableMinDateInput": false,
+                                    "enableMaxDateInput": false,
+                                    "key": "fechaInicio3",
+                                    "type": "samanDatetime",
+                                    "input": true,
+                                    "widget": {
+                                        "type": "calendar",
+                                        "displayInTimezone": "viewer",
+                                        "locale": "en",
+                                        "useLocaleSettings": false,
+                                        "allowInput": true,
+                                        "mode": "single",
+                                        "enableTime": false,
+                                        "noCalendar": false,
+                                        "format": "dd-MM-yyyy",
+                                        "hourIncrement": 12,
+                                        "minuteIncrement": 0,
+                                        "time_24hr": true,
+                                        "minDate": null,
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false,
+                                        "maxDate": null
+                                    },
+                                    "keyModified": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Hora",
+                                    "tabindex": "5",
+                                    "tableView": true,
+                                    "defaultValue": "12:00:00",
+                                    "key": "hora",
+                                    "type": "samanTime",
+                                    "input": true,
+                                    "inputMask": "99:99"
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "policyRow1",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Moneda",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "USD",
+                                                "value": "usd"
+                                            },
+                                            {
+                                                "label": "EUR",
+                                                "value": "eur"
+                                            },
+                                            {
+                                                "label": "GBP",
+                                                "value": "gbp"
+                                            },
+                                            {
+                                                "label": "JPY",
+                                                "value": "jpy"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "select": false
+                                    },
+                                    "key": "moneda",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Prorrogable",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Renovable",
+                                                "value": "Si"
+                                            },
+                                            {
+                                                "label": "No Renovable",
+                                                "value": "No"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "select": false
+                                    },
+                                    "key": "moneda1",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Policy_Row_2",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Distrito",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Lisboa",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "label": "Leiría",
+                                                "value": "2"
+                                            },
+                                            {
+                                                "label": "Santarém",
+                                                "value": "3"
+                                            },
+                                            {
+                                                "label": "Setúbal",
+                                                "value": "4"
+                                            },
+                                            {
+                                                "label": "Beja",
+                                                "value": "5"
+                                            },
+                                            {
+                                                "label": "Faro",
+                                                "value": "6"
+                                            },
+                                            {
+                                                "label": "Évora",
+                                                "value": "7"
+                                            },
+                                            {
+                                                "label": "Portalegre",
+                                                "value": "8"
+                                            },
+                                            {
+                                                "label": "Castelo Branco",
+                                                "value": "9"
+                                            },
+                                            {
+                                                "label": "Guarda",
+                                                "value": "10"
+                                            },
+                                            {
+                                                "label": "Coímbra",
+                                                "value": "11"
+                                            },
+                                            {
+                                                "label": "Aveiro",
+                                                "value": "12"
+                                            },
+                                            {
+                                                "label": "Viseu",
+                                                "value": "13"
+                                            },
+                                            {
+                                                "label": "Bragança",
+                                                "value": "14"
+                                            },
+                                            {
+                                                "label": "Vila Real",
+                                                "value": "15"
+                                            },
+                                            {
+                                                "label": "Oporto",
+                                                "value": "16"
+                                            },
+                                            {
+                                                "label": "Braga",
+                                                "value": "17"
+                                            },
+                                            {
+                                                "label": "Viana do Castelo",
+                                                "value": "18"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "required": true,
+                                        "select": false
+                                    },
+                                    "key": "oficina",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 4,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 4
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Municipio",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Alenquer",
+                                                "value": "100"
+                                            },
+                                            {
+                                                "label": "Amadora",
+                                                "value": "101"
+                                            },
+                                            {
+                                                "label": "Arruda dos Vinhos",
+                                                "value": "102"
+                                            },
+                                            {
+                                                "label": "Azambuja",
+                                                "value": "103"
+                                            },
+                                            {
+                                                "label": "Cadaval",
+                                                "value": "104"
+                                            },
+                                            {
+                                                "label": "Cascaes",
+                                                "value": "105"
+                                            },
+                                            {
+                                                "label": "Lisboa",
+                                                "value": "106"
+                                            },
+                                            {
+                                                "label": "Loures",
+                                                "value": "107"
+                                            },
+                                            {
+                                                "label": "Lourinhã",
+                                                "value": "108"
+                                            },
+                                            {
+                                                "label": "Mafra",
+                                                "value": "109"
+                                            },
+                                            {
+                                                "label": "Odivelas",
+                                                "value": "110"
+                                            },
+                                            {
+                                                "label": "Oeiras",
+                                                "value": "111"
+                                            },
+                                            {
+                                                "label": "Sintra",
+                                                "value": "112"
+                                            },
+                                            {
+                                                "label": "Sobral de Monte Agraço",
+                                                "value": "113"
+                                            },
+                                            {
+                                                "label": "Torres Vedras",
+                                                "value": "114"
+                                            },
+                                            {
+                                                "label": "Vila Franca de Xira",
+                                                "value": "115"
+                                            }
+                                        ]
+                                    },
+                                    "refreshOn": "oficina",
+                                    "validate": {
+                                        "required": true,
+                                        "select": false
+                                    },
+                                    "key": "oficina1",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 4,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 4
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Oficina",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Lisboa - Alenquer - Of1",
+                                                "value": "1011"
+                                            },
+                                            {
+                                                "label": "Lisboa - Alenquer - Of2",
+                                                "value": "1012"
+                                            },
+                                            {
+                                                "label": "Lisboa - Alenquer - Of3",
+                                                "value": "1013"
+                                            },
+                                            {
+                                                "label": "Lisboa - Amadora - Of1",
+                                                "value": "1021"
+                                            },
+                                            {
+                                                "label": "Lisboa - Amadora - Of2",
+                                                "value": "1022"
+                                            },
+                                            {
+                                                "label": "Lisboa - Azambuja - Of3",
+                                                "value": "1031"
+                                            }
+                                        ]
+                                    },
+                                    "refreshOn": "oficina",
+                                    "validate": {
+                                        "required": true,
+                                        "select": false
+                                    },
+                                    "key": "oficina2",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 4,
+                            "currentWidth": 4
+                        }
+                    ],
+                    "key": "policyRow2",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        },
+        {
+            "title": "Datos del Tomador",
+            "collapsible": true,
+            "key": "datosDelTomador",
+            "type": "samanPanel",
+            "label": "Panel",
+            "collapsed": false,
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "HTML",
+                    "className": "wrap",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<img src=\"https://theforeignbot.com/images/Contratante.jpg\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">\n\n\n\n\n",
+                    "refreshOnChange": false,
+                    "key": "html6",
+                    "type": "samanHtmlelement",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "DatosTomador",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Tipo Doc.",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "DNI",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "label": "PAS",
+                                                "value": "2"
+                                            },
+                                            {
+                                                "label": "NIF",
+                                                "value": "3"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "select": false
+                                    },
+                                    "key": "tipoDoc",
+                                    "tags": [
+                                        "TipoDocumento"
+                                    ],
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 2,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Número Documento",
+                                    "applyMaskOn": "change",
+                                    "tableView": true,
+                                    "key": "segNomTomador",
+                                    "tags": [
+                                        "SegundoNombreTomador"
+                                    ],
+                                    "type": "samanTextfield",
+                                    "input": true
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 4,
+                            "width": 4
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Nombre Completo",
+                                    "applyMaskOn": "change",
+                                    "tableView": true,
+                                    "key": "nomCompTomador",
+                                    "tags": [
+                                        "NombreCompletoTomador"
+                                    ],
+                                    "type": "samanTextfield",
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 6,
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "datosTomador",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Dirección de Habitación",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                        "values": [
+                            {
+                                "label": "Calle Berlín 9 Bis, CP 11600, CDMX, México",
+                                "value": "1"
+                            },
+                            {
+                                "label": "Calle Los Tucanes 233, Lima, Perú",
+                                "value": "2"
+                            }
+                        ]
+                    },
+                    "validate": {
+                        "select": false
+                    },
+                    "key": "direccionTomador",
+                    "tags": [
+                        "DireccionTomador"
+                    ],
+                    "type": "samanSelect",
+                    "searchField": "label__regex",
+                    "authenticate": true,
+                    "input": true
+                },
+                {
+                    "label": "Forma de Pago",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Medio de Pago",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "defaultValue": 2,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Debito",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "label": "Crédito",
+                                                "value": "2"
+                                            },
+                                            {
+                                                "label": "Domiciliación",
+                                                "value": "4"
+                                            },
+                                            {
+                                                "label": "Efectivo",
+                                                "value": "3"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "select": false
+                                    },
+                                    "key": "formaDePago",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 4,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 4
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Datos Medio de Pago",
+                                    "applyMaskOn": "change",
+                                    "tableView": true,
+                                    "key": "segNomTomador1",
+                                    "tags": [
+                                        "SegundoNombreTomador"
+                                    ],
+                                    "type": "samanTextfield",
+                                    "input": true
+                                }
+                            ],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "formaDePago1",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Forma de Pago",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Medio de Contacto",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "defaultValue": 2,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Móvil",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "label": "Teléfono Fijo",
+                                                "value": "2"
+                                            },
+                                            {
+                                                "label": "Email",
+                                                "value": "4"
+                                            },
+                                            {
+                                                "label": "Correspondencia",
+                                                "value": "3"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "select": false
+                                    },
+                                    "key": "formaDePago3",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 4,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 4
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Datos Medio de Contacto",
+                                    "applyMaskOn": "change",
+                                    "tableView": true,
+                                    "key": "segNomTomador2",
+                                    "tags": [
+                                        "SegundoNombreTomador"
+                                    ],
+                                    "type": "samanTextfield",
+                                    "input": true
+                                }
+                            ],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "formaDePago2",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        },
+        {
+            "title": "Datos del Riesgo",
+            "collapsible": true,
+            "key": "datosDelRiesgo",
+            "type": "samanPanel",
+            "label": "Panel",
+            "collapsed": false,
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "HTML",
+                    "className": "wrap",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<img src=\"https://theforeignbot.com/images/Riesgo.jpg\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">\n\n\n\n\n",
+                    "refreshOnChange": false,
+                    "key": "html8",
+                    "type": "samanHtmlelement",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "DatosTomador",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Tipo Doc.",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "DNI",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "label": "PAS",
+                                                "value": "2"
+                                            },
+                                            {
+                                                "label": "NIF",
+                                                "value": "3"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "select": false
+                                    },
+                                    "key": "tipoDoc1",
+                                    "tags": [
+                                        "TipoDocumento"
+                                    ],
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "width": 2,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Número Documento",
+                                    "applyMaskOn": "change",
+                                    "tableView": true,
+                                    "key": "segNomTomador3",
+                                    "tags": [
+                                        "SegundoNombreTomador"
+                                    ],
+                                    "type": "samanTextfield",
+                                    "input": true
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 4,
+                            "width": 4
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Nombre Completo",
+                                    "applyMaskOn": "change",
+                                    "tableView": true,
+                                    "key": "nomCompTomador1",
+                                    "tags": [
+                                        "NombreCompletoTomador"
+                                    ],
+                                    "type": "samanTextfield",
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 6,
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "datosTomador1",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "DatosRiesgo",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Edad",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": false,
+                                    "requireDecimal": false,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "edadAseg",
+                                    "type": "samanNumber",
+                                    "input": true
+                                }
+                            ],
+                            "width": 2,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Sexo",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Masculino",
+                                                "value": "M"
+                                            },
+                                            {
+                                                "label": "Femenino",
+                                                "value": "F"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "required": true,
+                                        "select": false
+                                    },
+                                    "key": "sexoAseg",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 2,
+                            "width": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Fumador",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "Si",
+                                                "value": "si"
+                                            },
+                                            {
+                                                "label": "No",
+                                                "value": "no"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "required": true,
+                                        "select": false
+                                    },
+                                    "key": "fumadorAseg",
+                                    "tags": [
+                                        "Fumador"
+                                    ],
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Ocupación",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "dataSrc": "resource",
+                                    "data": {
+                                        "resource": "occupation"
+                                    },
+                                    "valueProperty": "id",
+                                    "validate": {
+                                        "select": false
+                                    },
+                                    "key": "ocupacionAseg",
+                                    "type": "samanSelect",
+                                    "searchField": "label__regex",
+                                    "noRefreshOnScroll": false,
+                                    "authenticate": true,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 6,
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "datosTomador2",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        },
+        {
+            "title": "Coberturas",
+            "collapsible": true,
+            "key": "coberturas",
+            "type": "samanPanel",
+            "label": "Panel",
+            "collapsed": false,
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "HTML",
+                    "className": "wrap",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<img src=\"https://theforeignbot.com/images/Cobertura.jpg\" ; \nstyle=\"clip-path: inset(0% 0% 5% 0%); width: 100%\">\n\n\n\n\n",
+                    "refreshOnChange": false,
+                    "key": "html7",
+                    "type": "samanHtmlelement",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns3",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "html": "<p><strong>COB. PRINCIPALES</strong></p>",
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol3",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 3,
+                            "width": 3
+                        },
+                        {
+                            "components": [
+                                {
+                                    "html": "<p style=\"text-align:right;\"><strong>SUMA ASEGURADA &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></p>",
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol5",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [
+                                {
+                                    "html": "<p style=\"text-align:center;\"><strong>TASA</strong></p>",
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol4",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0
+                        },
+                        {
+                            "components": [
+                                {
+                                    "html": "<p style=\"text-align:center;\"><strong>DESCUENTO</strong></p>",
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol6",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "html": "<p style=\"text-align:center;\"><strong>PRIMA ANUAL</strong></p>",
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol7",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "columns8",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns3",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "check",
+                                    "hideLabel": true,
+                                    "tableView": false,
+                                    "defaultValue": true,
+                                    "key": "checkFallecimiento",
+                                    "type": "samanCheckbox",
+                                    "input": true,
+                                    "labelPosition": "left",
+                                    "keyModified": true
+                                }
+                            ],
+                            "width": 1,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 1
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "FALLECIMIENTO",
+                                    "labelPosition": "left-left",
+                                    "applyMaskOn": "change",
+                                    "customClass": "padding: 20px",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 50000,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "saFallecimiento",
+                                    "type": "samanNumber",
+                                    "labelWidth": 55,
+                                    "labelMargin": 2,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 5,
+                            "width": 5
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "tasaFallecimiento",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "longNumber": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "descuentoFallec",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "arbitraryPrecision": false,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "primaFallec",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "columns3",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns3",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "check",
+                                    "hideLabel": true,
+                                    "tableView": false,
+                                    "defaultValue": true,
+                                    "key": "checkSobrevivencia",
+                                    "type": "samanCheckbox",
+                                    "input": true,
+                                    "labelPosition": "left",
+                                    "keyModified": true
+                                }
+                            ],
+                            "width": 1,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 1
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "SOBREVIVENCIA",
+                                    "labelPosition": "left-left",
+                                    "applyMaskOn": "change",
+                                    "customClass": "padding: 20px",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 50000,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "saSobrevivencia",
+                                    "type": "samanNumber",
+                                    "labelWidth": 55,
+                                    "labelMargin": 2,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 5,
+                            "width": 5
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "tasaSobrevivencia",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "longNumber": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "descuentoSobrev",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "arbitraryPrecision": false,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "primaSobrevivencia",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "columns4",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns3",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "html": "<p><strong>COB. ADICIONALES</strong></p>",
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol9",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 3,
+                            "width": 3
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol10",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol11",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol12",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol13",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "columns9",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns3",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "check",
+                                    "hideLabel": true,
+                                    "tableView": false,
+                                    "defaultValue": true,
+                                    "key": "checkExoneracion",
+                                    "type": "samanCheckbox",
+                                    "input": true,
+                                    "labelPosition": "left",
+                                    "keyModified": true
+                                }
+                            ],
+                            "width": 1,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 1
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "EXON. DE PAGO DE PRIMAS",
+                                    "labelPosition": "left-left",
+                                    "applyMaskOn": "change",
+                                    "customClass": "padding: 20px",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 50000,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "saExoneracion",
+                                    "type": "samanNumber",
+                                    "labelWidth": 55,
+                                    "labelMargin": 2,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 5,
+                            "width": 5
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "tasaExoneracion",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "longNumber": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "descuentoExoner",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "arbitraryPrecision": false,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "primaExoneracion",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "columns5",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns3",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "check",
+                                    "hideLabel": true,
+                                    "tableView": false,
+                                    "defaultValue": true,
+                                    "key": "checkEnfGraves",
+                                    "type": "samanCheckbox",
+                                    "input": true,
+                                    "labelPosition": "left",
+                                    "keyModified": true
+                                }
+                            ],
+                            "width": 1,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 1
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "ENFERMEDADES GRAVES",
+                                    "labelPosition": "left-left",
+                                    "applyMaskOn": "change",
+                                    "customClass": "padding: 20px",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 50000,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "saEnfGraves",
+                                    "type": "samanNumber",
+                                    "labelWidth": 55,
+                                    "labelMargin": 2,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 5,
+                            "width": 5
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "tasaEnfGraves",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "longNumber": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "descuentoEnfGrav",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "arbitraryPrecision": false,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "primaEnfGraves",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "columns7",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns3",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "check",
+                                    "hideLabel": true,
+                                    "tableView": false,
+                                    "defaultValue": false,
+                                    "key": "checkInvTotPerm",
+                                    "type": "samanCheckbox",
+                                    "input": true,
+                                    "labelPosition": "left",
+                                    "keyModified": true
+                                }
+                            ],
+                            "width": 1,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 1
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "INV. TOTAL Y PERMANENTE",
+                                    "labelPosition": "left-left",
+                                    "applyMaskOn": "change",
+                                    "customClass": "padding: 20px",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 50000,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "saInvTotPerm",
+                                    "type": "samanNumber",
+                                    "labelWidth": 55,
+                                    "labelMargin": 2,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 5,
+                            "width": 5
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "tasaInvTotPerm",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "longNumber": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "descuentoInvTotPerm",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "arbitraryPrecision": false,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "primaInvTotPerm",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "columns6",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<br></br>",
+                    "refreshOnChange": false,
+                    "key": "html1",
+                    "type": "samanHtmlelement",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns3",
+                    "columns": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Boton_Calcular",
+                                    "attrs": [
+                                        {
+                                            "attr": "",
+                                            "value": ""
+                                        }
+                                    ],
+                                    "content": "<div style=\"text-align: right;\">\n<button style=\"padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;\">Calcular</button>\n</div>\n",
+                                    "refreshOnChange": false,
+                                    "key": "botonCalcular",
+                                    "type": "samanHtmlelement",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 8,
+                            "currentWidth": 8,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0
+                        },
+                        {
+                            "components": [
+                                {
+                                    "html": "<p style=\"text-align:right;\"><strong>PRIMA TOTAL</strong></p>",
+                                    "label": "Cob_Col_1",
+                                    "refreshOnChange": false,
+                                    "key": "cobCol14",
+                                    "type": "samanContent",
+                                    "input": false,
+                                    "tableView": false
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": ".",
+                                    "labelPosition": "right-left",
+                                    "applyMaskOn": "change",
+                                    "mask": false,
+                                    "disabled": true,
+                                    "tableView": false,
+                                    "defaultValue": 0,
+                                    "arbitraryPrecision": false,
+                                    "delimiter": true,
+                                    "requireDecimal": true,
+                                    "inputFormat": "plain",
+                                    "truncateMultipleSpaces": false,
+                                    "key": "primaTotal",
+                                    "type": "samanNumber",
+                                    "labelWidth": 0,
+                                    "labelMargin": 0,
+                                    "decimalLimit": 2,
+                                    "input": true
+                                }
+                            ],
+                            "size": "md",
+                            "width": 2,
+                            "currentWidth": 2
+                        }
+                    ],
+                    "key": "columns10",
+                    "type": "samanColumns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    ]
+}
