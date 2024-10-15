@@ -7,7 +7,7 @@
   </dmn:inputData>
   <dmn:inputData id="_209F5DEC-BDEC-47F8-93EF-E8C989F7CC0F" name="fechaInicio1">
     <dmn:extensionElements/>
-    <dmn:variable id="_75F0DE91-334A-429B-B199-797D713E5660" name="fechaInicio1" typeRef="date and time"/>
+    <dmn:variable id="_75F0DE91-334A-429B-B199-797D713E5660" name="fechaInicio1" typeRef="string"/>
   </dmn:inputData>
   <dmn:decision id="_AF01913E-A8D0-4B5E-B6BD-1D60412CC399" name="result">
     <dmn:extensionElements/>
