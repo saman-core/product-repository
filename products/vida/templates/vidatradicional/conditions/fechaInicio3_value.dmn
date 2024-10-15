@@ -19,7 +19,7 @@
       <dmn:requiredInput href="#_209F5DEC-BDEC-47F8-93EF-E8C989F7CC0F"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_35DD06DD-AF6B-467E-8342-96F1E0DD6319">
-      <dmn:text>date(fechaInicio1) + duration("P" + string(duracionDelContrato) + "Y")</dmn:text>
+      <dmn:text>date and time(fechaInicio1) + duration("P" + string(duracionDelContrato) + "Y")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmndi:DMNDI>
@@ -27,7 +27,7 @@
       <di:extension>
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="_35DD06DD-AF6B-467E-8342-96F1E0DD6319">
-            <kie:width>614</kie:width>
+            <kie:width>657</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
