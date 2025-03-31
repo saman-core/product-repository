@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="saman-core/property/fechaInicio3_value" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_5FA095CA-A8AF-4931-BDBA-A8ED1D0FD62F" name="fechaInicio3_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/fechaInicio3_value">
+  <dmn:extensionElements/>
+  <dmn:inputData id="_A4FDADCB-4175-494D-B121-7AF07DF26601" name="duracionDelContrato">
+    <dmn:extensionElements/>
+    <dmn:variable id="_3183C519-2EE0-45C1-B9FD-4B68DA45135A" name="duracionDelContrato" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:inputData id="_209F5DEC-BDEC-47F8-93EF-E8C989F7CC0F" name="fechaInicio1">
+    <dmn:extensionElements/>
+    <dmn:variable id="_75F0DE91-334A-429B-B199-797D713E5660" name="fechaInicio1" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:decision id="_AF01913E-A8D0-4B5E-B6BD-1D60412CC399" name="result">
+    <dmn:extensionElements/>
+    <dmn:variable id="_E148957A-829B-4A06-A650-A6F52572AAE5" name="result" typeRef="date and time"/>
+    <dmn:informationRequirement id="_E7C9F2C3-DF79-400D-85B9-AFCF05D4E5C9">
+      <dmn:requiredInput href="#_A4FDADCB-4175-494D-B121-7AF07DF26601"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_1E7AEC5C-3769-43E0-A283-E7F422DCB487">
+      <dmn:requiredInput href="#_209F5DEC-BDEC-47F8-93EF-E8C989F7CC0F"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_35DD06DD-AF6B-467E-8342-96F1E0DD6319">
+      <dmn:text>date and time(fechaInicio1) + duration("P" + string(duracionDelContrato) + "Y")</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_456A3D7E-E6D3-4526-A0E7-E9BF179A7052" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_35DD06DD-AF6B-467E-8342-96F1E0DD6319">
+            <kie:width>657</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_A4FDADCB-4175-494D-B121-7AF07DF26601" dmnElementRef="_A4FDADCB-4175-494D-B121-7AF07DF26601" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="284" y="307" width="155" height="54"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_209F5DEC-BDEC-47F8-93EF-E8C989F7CC0F" dmnElementRef="_209F5DEC-BDEC-47F8-93EF-E8C989F7CC0F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="570" y="307" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_AF01913E-A8D0-4B5E-B6BD-1D60412CC399" dmnElementRef="_AF01913E-A8D0-4B5E-B6BD-1D60412CC399" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="431" y="189" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_E7C9F2C3-DF79-400D-85B9-AFCF05D4E5C9" dmnElementRef="_E7C9F2C3-DF79-400D-85B9-AFCF05D4E5C9">
+        <di:waypoint x="361.5" y="334"/>
+        <di:waypoint x="481" y="239"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_1E7AEC5C-3769-43E0-A283-E7F422DCB487" dmnElementRef="_1E7AEC5C-3769-43E0-A283-E7F422DCB487">
+        <di:waypoint x="620" y="332"/>
+        <di:waypoint x="481" y="239"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>

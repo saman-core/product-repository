@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_4CDE80E9-CD62-44E2-ACAD-CA374EBBECDE" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_D2BD9876-68CB-4682-BA20-D6EB48989FD9" name="tasaEnfGraves_value" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="saman-core/property/tasaEnfGraves_value">
+  <dmn:extensionElements/>
+  <dmn:decision id="_A9972635-BFDC-4B2C-A627-6083F5E843DF" name="result">
+    <dmn:extensionElements/>
+    <dmn:variable id="_770530F4-7528-4CBF-B58B-D4190135BA44" name="result" typeRef="number"/>
+    <dmn:informationRequirement id="_CB6C00CA-5C74-4A70-AD18-6C05421B1F31">
+      <dmn:requiredInput href="#_4000F9B2-ACE8-4F23-9B63-B0672C77E60C"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_F919642B-0EC2-41CD-BB42-EFAE36D94B9C">
+      <dmn:text>tasaFallecimiento</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:inputData id="_4000F9B2-ACE8-4F23-9B63-B0672C77E60C" name="tasaFallecimiento">
+    <dmn:extensionElements/>
+    <dmn:variable id="_F74EB7CF-A1C6-48BD-A873-5CA40B1C5B50" name="tasaFallecimiento" typeRef="number"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_920415F5-E0C5-4285-BDFE-54897345D9D5" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_F919642B-0EC2-41CD-BB42-EFAE36D94B9C">
+            <kie:width>190</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_A9972635-BFDC-4B2C-A627-6083F5E843DF" dmnElementRef="_A9972635-BFDC-4B2C-A627-6083F5E843DF" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="331" y="118" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_4000F9B2-ACE8-4F23-9B63-B0672C77E60C" dmnElementRef="_4000F9B2-ACE8-4F23-9B63-B0672C77E60C" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="316" y="237" width="128" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_CB6C00CA-5C74-4A70-AD18-6C05421B1F31" dmnElementRef="_CB6C00CA-5C74-4A70-AD18-6C05421B1F31">
+        <di:waypoint x="380" y="262"/>
+        <di:waypoint x="381" y="143"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
