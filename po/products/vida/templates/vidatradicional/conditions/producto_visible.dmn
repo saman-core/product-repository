@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="saman-core/property/producto_visible" id="_E375ABE6-AA9A-418C-B29D-85D0F1A3CE0D" name="producto_visible" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0">
+  <decision name="New Decision" id="_8326B3BB-8CBC-4CC5-86CA-EF5F7FF6CA08">
+    <variable id="_9F41676E-DDBD-4248-B363-F13E9FBAB731" name="New Decision" />
+    <informationRequirement id="_0232DB5E-A6A1-4B53-A590-8549568CE4ED">
+      <requiredInput href="#_84407B9B-F479-42E6-93FA-A11F08E7FCCF" />
+    </informationRequirement>
+  </decision>
+  <inputData name="New Input Data" id="_84407B9B-F479-42E6-93FA-A11F08E7FCCF">
+    <variable name="New Input Data" id="_FEF120DA-CABE-4368-96CB-722D8034D1E5" />
+  </inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_0D62EF44-BA7C-4887-AAB6-106E90BA32E6" name="Default DRD" useAlternativeInputDataShape="false">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths />
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="_C57E3A08-49AD-4C08-9E38-2739595EF394" dmnElementRef="_84407B9B-F479-42E6-93FA-A11F08E7FCCF" isCollapsed="false" isListedInputData="false">
+        <dc:Bounds x="100" y="300" width="160" height="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="_F0B56BB6-64D4-42A6-9406-0D13EA5FCFED" dmnElementRef="_8326B3BB-8CBC-4CC5-86CA-EF5F7FF6CA08" isCollapsed="false" isListedInputData="false">
+        <dc:Bounds x="100" y="100" width="160" height="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="_11FBEFC2-0DBD-40BC-84E5-540FBC91E834-AUTO-TARGET" dmnElementRef="_0232DB5E-A6A1-4B53-A590-8549568CE4ED" sourceElement="_C57E3A08-49AD-4C08-9E38-2739595EF394" targetElement="_F0B56BB6-64D4-42A6-9406-0D13EA5FCFED">
+        <di:waypoint x="180" y="340" />
+        <di:waypoint x="180" y="140" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
