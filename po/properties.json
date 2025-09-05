@@ -1,4 +1,5 @@
 {
-  "name": "policy",
+  "name": "po",
+  "description": "Policy",
   "type": "CONTRACT"
 }
